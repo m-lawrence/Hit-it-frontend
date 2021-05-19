@@ -22,7 +22,7 @@ function App() {
       {!loggedInUser ? <Login setLoggedInUser={setLoggedInUser} bands={bands}/> : null}
       <Switch>
         <Route exact path='/profile'>
-         {loggedInUser && <Profile />}
+         {loggedInUser && <Profile loggedInUser={loggedInUser}/>}
         </Route>
         <Route>
          {loggedInUser && <Venues exact path='/venues'/>}
