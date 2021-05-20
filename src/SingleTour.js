@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 
 function SingleTour({ tour }) {
-    
+   
     const history = useHistory()
 
     function handleTourClick() {

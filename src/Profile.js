@@ -3,7 +3,7 @@ import TourList from './TourList';
 
 function Profile({ loggedInUser }) {
    const currentUser = loggedInUser[0]
-   
+  
     return (
       <div>
         <h1 className='bandProfileHeader'>{currentUser.name}</h1>

@@ -5,6 +5,7 @@ function TourList({ currentUser }) {
     const toursArr = currentUser.tours.map(tour => {
         return <SingleTour key={tour.id} tour={tour} />
     })
+   
     return (
       <div>
         {toursArr}
