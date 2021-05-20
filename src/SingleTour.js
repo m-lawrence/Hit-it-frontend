@@ -3,18 +3,17 @@ import { useHistory } from 'react-router-dom';
 
 
 function SingleTour({ tour }) {
-    const { id, band_user_id, name, image } = tour
     
     const history = useHistory()
 
     function handleTourClick() {
-        history.push(`./tours/${id}`)
+        history.push(`./tours/${tour.id}`, {params: tour})
     }
     
     return (
       <div onClick={handleTourClick}>
-        <img src={image} alt={name} className='singleTourImg'/>
-        <h4 className='singleTourHeading'>{name}</h4>
+        <img src={tour.image} alt={tour.name} className='singleTourImg'/>
+        <h4 className='singleTourHeading'>{tour.name}</h4>
       </div>
     );
   }

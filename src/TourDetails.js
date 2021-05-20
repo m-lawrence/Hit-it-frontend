@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-// import { useParams } from 'react-router-dom'
+import React from 'react';
+import { useLocation} from 'react-router-dom'
 
 function TourDetails() {
-//   const params = useParams()
-//  console.log(params)
-  
+  const location = useLocation()
+  // console.log(location.state.params)
     return (
       <div>
-        Tour Details
+        <h1>{location.state.params.name}</h1>
       </div>
     );
   }
