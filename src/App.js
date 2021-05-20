@@ -4,6 +4,7 @@ import NavBar from './NavBar'
 import Login from './Login'
 import Profile from './Profile'
 import Venues from './Venues'
+import TourDetails from './TourDetails'
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState(null)
@@ -24,8 +25,11 @@ function App() {
         <Route exact path='/profile'>
          {loggedInUser && <Profile loggedInUser={loggedInUser}/>}
         </Route>
-        <Route>
-         {loggedInUser && <Venues exact path='/venues'/>}
+        <Route exact path='/tours/:id'>
+         {loggedInUser && <TourDetails />}
+        </Route>
+        <Route exact path='/venues'>
+         {loggedInUser && <Venues />}
         </Route>
       </Switch>
     </div>

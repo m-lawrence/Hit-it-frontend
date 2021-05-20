@@ -37,3 +37,13 @@ code {
   text-align: center;
   padding-top: 50px;;
 }
+
+.singleTourImg {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+
+/* .singleTourHeading {
+  float: right;
+} */
