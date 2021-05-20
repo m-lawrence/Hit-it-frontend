@@ -45,7 +45,7 @@ function App() {
          {loggedInUser && <Profile loggedInUser={loggedInUser}/>}
         </Route>
         <Route exact path='/tours/:id'>
-         {loggedInUser && <TourDetails />}
+         {loggedInUser && <TourDetails venues={venues}/>}
         </Route>
         <Route exact path='/venues'>
          {loggedInUser && <Venues setSearchText={setSearchText} venues={filteredVenues} setSearch={setSearch} search={search}/>}

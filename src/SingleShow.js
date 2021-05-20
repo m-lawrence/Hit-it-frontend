@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function SingleShow({ show }) {
+function SingleShow({ show, venue }) {
     const [showClicked, setShowClicked] = useState(false)
     const [showEditClicked, setShowEditClicked] = useState(false)
 
@@ -11,13 +11,13 @@ function SingleShow({ show }) {
     function handleShowEditClick() {
         setShowEditClicked(showEditClicked => ! showEditClicked)
     }
-   
+  
     return (
       <div>
         <p>{show.date}</p>
         <p>{show.location}</p>
         <p>{show.time}</p>
-        <p>{show.venue}</p>
+        <p>{venue[0].name}</p>
         <button onClick={handleShowClick}>{showClicked ? 'Less' : 'More'}</button>
         {showClicked &&
          <div>

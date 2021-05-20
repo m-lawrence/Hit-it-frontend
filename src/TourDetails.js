@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { useLocation} from 'react-router-dom'
 import SingleShow from './SingleShow';
 
-function TourDetails() {
+function TourDetails({ venues }) {
   const location = useLocation()
   const [addShowClicked, setAddShowClicked] = useState(false)
 
   const showsArr = location.state.params.shows.map(show => {
-    return <SingleShow key={show.id} show={show}/>
+    return <SingleShow key={show.id} show={show} venue={venues.filter(venue => {
+      return venue.id === show.venue_id
+    })}/>
   })
 
   function handleAddShowClick() {
