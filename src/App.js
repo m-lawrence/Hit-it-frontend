@@ -10,6 +10,7 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState(null)
   const [bands, setBands] = useState([])
   const [venues, setVenues] = useState([])
+  const [search, setSearch] = useState("")
  
   useEffect(() => {
     fetch('http://localhost:3000/band_users')
@@ -22,6 +23,12 @@ function App() {
       .then(res => res.json())
       .then(setVenues)
   }, [])
+
+  const filteredVenues = venues.filter(venue => {
+    if (venue.location.toLowerCase().includes(search.toLowerCase())) {
+      return venue
+    }
+  })
   
 
   return (
@@ -36,7 +43,7 @@ function App() {
          {loggedInUser && <TourDetails />}
         </Route>
         <Route exact path='/venues'>
-         {loggedInUser && <Venues venues={venues}/>}
+         {loggedInUser && <Venues venues={filteredVenues} setSearch={setSearch} search={search}/>}
         </Route>
       </Switch>
     </div>
