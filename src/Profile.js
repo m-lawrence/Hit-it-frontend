@@ -1,22 +1,28 @@
 import React from 'react';
+import TourList from './TourList';
 
 function Profile({ loggedInUser }) {
-    
+   const currentUser = loggedInUser[0]
+   
     return (
       <div>
-        <h1 className='bandProfileHeader'>{loggedInUser[0].name}</h1>
+        <h1 className='bandProfileHeader'>{currentUser.name}</h1>
         <div className='bandProfileImgDiv'>
-            <img className='bandProfileImg' src={loggedInUser[0].image} alt={loggedInUser[0].name} />
+            <img className='bandProfileImg' src={currentUser.image} alt={currentUser.name} />
         </div>
         <div className='bandInfo'>
-            <p>Email: {loggedInUser[0].email}</p>
-            <p>Website: {loggedInUser[0].website}</p>
-            <p>Facebook: {loggedInUser[0].facebook}</p>
-            <p>Music: {loggedInUser[0].music_link}</p>
-            <p>Genre: {loggedInUser[0].genre}</p>
-            <p>Location: {loggedInUser[0].location}</p>
-            <p>Band members: {loggedInUser[0].band_members}</p>
-            <p>Bio: {loggedInUser[0].bio}</p>
+            <p>Email: {currentUser.email}</p>
+            <p>Website: {currentUser.website}</p>
+            <p>Facebook: {currentUser.facebook}</p>
+            <p>Music: {currentUser.music_link}</p>
+            <p>Genre: {currentUser.genre}</p>
+            <p>Location: {currentUser.location}</p>
+            <p>Band members: {currentUser.band_members}</p>
+            <p>Bio: {currentUser.bio}</p>
+        </div>
+        <div className='bandProfileTourDiv'>
+            <h2>Tours</h2>
+            <TourList currentUser={currentUser} />
         </div>
       </div>
     );
