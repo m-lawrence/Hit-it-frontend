@@ -1,9 +1,14 @@
 import React from 'react';
+import SingleVenue from './SingleVenue';
 
-function Venues() {
+function Venues({ venues }) {
+    const venuesArr = venues.map(venue => {
+        return <SingleVenue key={venue.id} venue={venue} />
+    })
     return (
       <div>
-        Venues
+        <h1>Search Venues</h1>
+        {venuesArr}
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Switch, useHistory } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import NavBar from './NavBar'
 import Login from './Login'
 import Profile from './Profile'
@@ -9,11 +9,18 @@ import TourDetails from './TourDetails'
 function App() {
   const [loggedInUser, setLoggedInUser] = useState(null)
   const [bands, setBands] = useState([])
-
+  const [venues, setVenues] = useState([])
+ 
   useEffect(() => {
     fetch('http://localhost:3000/band_users')
       .then(res => res.json())
       .then(setBands)
+  }, [])
+
+  useEffect(() => {
+    fetch('http://localhost:3000/venues')
+      .then(res => res.json())
+      .then(setVenues)
   }, [])
   
 
@@ -29,7 +36,7 @@ function App() {
          {loggedInUser && <TourDetails />}
         </Route>
         <Route exact path='/venues'>
-         {loggedInUser && <Venues />}
+         {loggedInUser && <Venues venues={venues}/>}
         </Route>
       </Switch>
     </div>
