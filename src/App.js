@@ -11,6 +11,7 @@ function App() {
   const [bands, setBands] = useState([])
   const [venues, setVenues] = useState([])
   const [search, setSearch] = useState("")
+  const [searchText, setSearchText] = useState("")
  
   useEffect(() => {
     fetch('http://localhost:3000/band_users')
@@ -24,12 +25,16 @@ function App() {
       .then(setVenues)
   }, [])
 
-  const filteredVenues = venues.filter(venue => {
-    if (venue.location.toLowerCase().includes(search.toLowerCase())) {
-      return venue
-    }
-  })
+ 
   
+ 
+    const filteredVenues = venues.filter(venue => {
+      if (venue.location.toLowerCase().includes(searchText.toLowerCase())) {
+        return venue
+      }
+    })
+
+
 
   return (
     <div>
@@ -43,7 +48,7 @@ function App() {
          {loggedInUser && <TourDetails />}
         </Route>
         <Route exact path='/venues'>
-         {loggedInUser && <Venues venues={filteredVenues} setSearch={setSearch} search={search}/>}
+         {loggedInUser && <Venues setSearchText={setSearchText} venues={filteredVenues} setSearch={setSearch} search={search}/>}
         </Route>
       </Switch>
     </div>
