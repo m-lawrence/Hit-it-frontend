@@ -5,6 +5,7 @@ import SingleShow from './SingleShow';
 function TourDetails({ venues }) {
   const location = useLocation()
   const [addShowClicked, setAddShowClicked] = useState(false)
+  const [shows, setShows] = useState([])
   const [formData, setFormData] = useState({
     date:"",
     location:"",
@@ -19,7 +20,7 @@ function TourDetails({ venues }) {
       return venue.id === show.venue_id
     })}/>
   })
-
+  
   function handleAddShowClick() {
     setAddShowClicked(addShowClicked => !addShowClicked)
   }
@@ -28,11 +29,13 @@ function TourDetails({ venues }) {
     setFormData({...formData, 
       [e.target.name] : e.target.value
   })
+
   }
 
   function handleNewShowSubmit(e) {
     e.preventDefault()
-    
+
+
     const newShow = {
       date:formData.date,
       location:formData.location,
@@ -41,9 +44,24 @@ function TourDetails({ venues }) {
       other_bands:formData.other_bands,
       details:formData.details,
       tour_id: location.state.params.id,
-      venue_id: null
+      venue_id: 1
     }
-     
+
+    fetch('http://localhost:3000/shows', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newShow)
+    })
+        .then(res => res.json())
+        .then(addNewShow)
+    
+  }
+
+  function addNewShow(showObj) {
+    const moreShows= location.state.params.shows.push(showObj)
+    setShows(moreShows)
   }
   
     return (
@@ -58,11 +76,11 @@ function TourDetails({ venues }) {
         <div>
           <form onSubmit={handleNewShowSubmit}>
             <label>Date: </label>
-            <input type="text" value={formData.date} name="date" onChange={handleChange}></input>
+            <input type="date" value={formData.date} name="date" onChange={handleChange}></input>
             <label>Location: </label>
                <input type="text" value={formData.location} name="location" onChange={handleChange}></input>
                <label>Time: </label>
-               <input type="text" value={formData.time} name="time" onChange={handleChange}></input>
+               <input type="time" value={formData.time} name="time" onChange={handleChange}></input>
                <label>Venue: </label>
                <input type="text" value={formData.venue} name="venue" onChange={handleChange}></input>
                <label>Other bands: </label>
