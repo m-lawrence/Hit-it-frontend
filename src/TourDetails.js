@@ -16,7 +16,7 @@ function TourDetails({ venues }) {
 })
 
   const showsArr = location.state.params.shows.map(show => {
-    return <SingleShow key={show.id} show={show} venue={venues.filter(venue => {
+    return <SingleShow key={show.id} show={show} removeShow={removeShow} venue={venues.filter(venue => {
       return venue.id === show.venue_id
     })}/>
   })
@@ -62,6 +62,15 @@ function TourDetails({ venues }) {
   function addNewShow(showObj) {
     const moreShows= location.state.params.shows.push(showObj)
     setShows(moreShows)
+  }
+
+  function removeShow(id) {
+    const afterDelete = location.state.params.shows.filter(show => {
+      if (show.id !== id) {
+        return show
+      }
+    })
+    setShows(afterDelete)
   }
   
     return (

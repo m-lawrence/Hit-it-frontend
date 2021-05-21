@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function SingleShow({ show, venue }) {
+function SingleShow({ show, venue, removeShow }) {
     const [showClicked, setShowClicked] = useState(false)
     const [showEditClicked, setShowEditClicked] = useState(false)
 
@@ -10,6 +10,13 @@ function SingleShow({ show, venue }) {
 
     function handleShowEditClick() {
         setShowEditClicked(showEditClicked => ! showEditClicked)
+    }
+
+    function handleShowDeleteClick() {
+        fetch(`http://localhost:3000/shows/${show.id}`, {
+            method: 'DELETE'
+        })
+        removeShow(show.id)
     }
   
     return (
@@ -24,7 +31,7 @@ function SingleShow({ show, venue }) {
            <p>With: {show.other_bands}</p>
            <p>Details: {show.details}</p>
            <button onClick={handleShowEditClick}>Edit</button>
-           <button>Delete</button>
+           <button onClick={handleShowDeleteClick}>Delete</button>
          </div>}
          {showEditClicked && showClicked &&
          <div>
