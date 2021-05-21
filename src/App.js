@@ -12,6 +12,7 @@ function App() {
   const [venues, setVenues] = useState([])
   const [search, setSearch] = useState("")
   const [searchText, setSearchText] = useState("")
+  const [tours, setTours] = useState([])
  
   useEffect(() => {
     fetch('http://localhost:3000/band_users')
@@ -25,8 +26,7 @@ function App() {
       .then(setVenues)
   }, [])
 
- 
-  
+
  
     const filteredVenues = venues.filter(venue => {
       if (venue.location.toLowerCase().includes(searchText.toLowerCase())) {
@@ -34,18 +34,20 @@ function App() {
       }
     })
 
-
+  function addNewTour(tourObj) {
+    setTours([...tours, tourObj])
+  }
 
   return (
     <div>
       {loggedInUser && <NavBar setLoggedInUser={setLoggedInUser}/>}
-      {!loggedInUser ? <Login setLoggedInUser={setLoggedInUser} bands={bands}/> : null}
+      {!loggedInUser ? <Login setLoggedInUser={setLoggedInUser} bands={bands} setTours={setTours}/> : null}
       <Switch>
         <Route exact path='/profile'>
-         {loggedInUser && <Profile loggedInUser={loggedInUser}/>}
+         {loggedInUser && <Profile loggedInUser={loggedInUser} addNewTour={addNewTour} tours={tours}/>}
         </Route>
         <Route exact path='/tours/:id'>
-         {loggedInUser && <TourDetails venues={venues}/>}
+         {loggedInUser && <TourDetails venues={venues} />}
         </Route>
         <Route exact path='/venues'>
          {loggedInUser && <Venues setSearchText={setSearchText} venues={filteredVenues} setSearch={setSearch} search={search}/>}

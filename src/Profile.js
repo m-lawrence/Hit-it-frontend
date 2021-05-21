@@ -1,7 +1,7 @@
 import React from 'react';
 import TourList from './TourList';
 
-function Profile({ loggedInUser }) {
+function Profile({ loggedInUser, addNewTour, tours }) {
    const currentUser = loggedInUser[0]
   
     return (
@@ -22,7 +22,7 @@ function Profile({ loggedInUser }) {
         </div>
         <div className='bandProfileTourDiv'>
             <h2>Tours</h2>
-            <TourList currentUser={currentUser} />
+            <TourList currentUser={currentUser} addNewTour={addNewTour} tours={tours}/>
         </div>
       </div>
     );

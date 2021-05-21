@@ -1,7 +1,7 @@
 import React, { useState  } from 'react';
 import { useHistory } from 'react-router-dom';
 
-function Login({ setLoggedInUser, bands }) {
+function Login({ setLoggedInUser, bands, setTours }) {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const history = useHistory()
@@ -12,7 +12,9 @@ function Login({ setLoggedInUser, bands }) {
         const theUser = bands.filter(band => {
            return (band.email === email) && (band.password === password)
         })
+      
         setLoggedInUser(theUser)
+        setTours(theUser[0].tours)
         history.push('./profile')
     }
 
