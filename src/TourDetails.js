@@ -65,13 +65,14 @@ function TourDetails({ venues }) {
   }
 
   function removeShow(id) {
-    const afterDelete = location.state.params.shows.filter(show => {
+    location.state.params.shows = location.state.params.shows.filter(show => {
       if (show.id !== id) {
         return show
       }
     })
-    setShows(afterDelete)
+    setShows(location.state.params.shows)
   }
+ 
   
     return (
       <div>
