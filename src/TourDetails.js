@@ -74,14 +74,16 @@ function TourDetails({ venues }) {
   }
 
   function updateShow(newShow) {
-    const editedShow = location.state.params.shows.map(show => {
+    const editedShows = location.state.params.shows.map(show => {
       if (show.id === newShow.id) {
         return newShow
       } else {
       return show
       }
     })
-    setShows(editedShow)
+    location.state.params.shows = editedShows
+    setShows(location.state.params.shows)
+  
   }
  
   

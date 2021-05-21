@@ -49,7 +49,8 @@ function SingleShow({ show, venue, removeShow, updateShow }) {
         })
             // .then(response => response.json())
             // .then(data => updateShow(data))
-            updateShow(updatedShow)
+           const readyShow = {...updatedShow, id: show.id}
+           updateShow(readyShow)
     }
 
     function handleEditShowChange(e) {
