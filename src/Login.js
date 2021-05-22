@@ -19,17 +19,28 @@ function Login({ setLoggedInUser, bands, setTours }) {
     }
 
     return (
-      <div id="loginDiv">
-        Login
-        <form onSubmit={handleLoginSubmit}>
-            <label>email: </label>
-            <input type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-            <label>password: </label>
-            <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
-            <button type="submit">Login</button>
-        </form>
+      <div className="loginContainer">
+        <div className='box'>
+            <h1>Sign in</h1>
+            <form onSubmit={handleLoginSubmit}>
+                <div className='loginRow'>
+                    <input type="text" name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                </div>
+                <div className='loginRow'>
+                    <input type="password" name="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                </div>
+                <div className='loginRow'>
+                    <button type="submit" id='login'>Login</button>
+                </div>
+            </form>
+            {/* <div class="loginRow">
+//              <a href="#">Forget Password</a>
+//          </div>  */}
+        </div>
       </div>
     );
   }
   
   export default Login;
+
+

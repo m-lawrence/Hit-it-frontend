@@ -8,12 +8,18 @@ function NavBar({ setLoggedInUser }) {
     }
 
     return (
-      <div>
-        <NavLink to="/profile" exact>My Page</NavLink>
-        <NavLink to="/venues" exact>Find a venue</NavLink>
-        <NavLink to="/" exact onClick={handleLogout}>Logout</NavLink>
+      <div className='navBar'>
+          <div className='logo'>
+              <h2>Hit It</h2>
+          </div>
+          <ul>
+            <li><NavLink to="/profile" exact>My Page</NavLink></li>
+            <li><NavLink to="/venues" exact>Find a venue</NavLink></li>
+            <li><NavLink to="/" exact onClick={handleLogout}>Logout</NavLink></li>
+          </ul>
       </div>
     );
   }
   
   export default NavBar;
+

@@ -12,6 +12,113 @@ code {
     monospace;
 }
 
+/* Login page */
+.loginContainer{
+  position: relative;
+  width: 100%;   min-height: 100vh;
+  background: url(https://mk0geketeyorgkvhgr38.kinstacdn.com/wp-content/uploads/2015/12/city-road-street-buildings-1024x673.jpg);
+  background-size: 100% 100%;
+}
+.loginContainer::before{
+  content: '';
+  position: absolute;
+  top: 0;  left: 0;
+  background: #262626;
+  width: 100%;  height: 100%;
+  mix-blend-mode: hard-light;
+}
+.loginContainer .box{
+  position: absolute;
+  top: 50%;  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 50vw;  min-height: 10vh;
+  background: transparent;  color: #fff;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  transition: .9s;
+}
+.loginContainer .box:hover{
+  background: rgba(255,255,255,.2);
+}
+.loginContainer .box h1{
+  font-size: 40px;
+  text-align: center;  
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+}
+.loginContainer .box .loginRow{
+  width: 100%;
+  margin: 25px 0;
+  text-align: center;
+}
+.loginContainer .box .loginRow input{
+  border: none;   outline: none;
+  width: 100%;
+  padding: 13px 25px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  background: rgba(255,255,255,.4);   color: #fff;
+  font-size: 18px;
+}
+::placeholder{
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+}
+.loginContainer .box .loginRow a{
+  display: inline-block;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;  
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.loginContainer .box .loginRow button#login{
+  background: #00bcd4;
+  padding: 15px 0;
+  border-radius: 50px; 
+  width: 100%; 
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* end login */
+/* NavBar */
+
+.navBar {
+  display:flex;
+  background: linear-gradient(135deg, violet, teal); 
+  justify-content: space-around;
+  padding:20px 0;
+  color:rgb(255, 254, 254);
+  align-items: center;
+  }
+  .navBar ul{
+  display:flex;
+  list-style: none;
+  width:40%;
+  justify-content: space-between;
+  }
+  .navBar ul li{
+    border: 2px solid rgb(253, 247, 247);
+    padding: 5px;
+    border-radius: 18.2px;
+  }
+  .navBar ul li:hover {
+    color: #ffec61;
+    border-color:   purple;
+  }
+  .navBar ul li a {
+    color:#fff;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+/* nav end */
+
 .bandProfileHeader {
   text-align: center;
 }
