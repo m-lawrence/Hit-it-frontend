@@ -88,7 +88,7 @@ function TourDetails({ venues }) {
  
   
     return (
-      <div>
+      <div className="tourDeetsContainer">
         <h1>{location.state.params.name}</h1>
         <img src={location.state.params.image} alt={location.state.params.name}/>
         {showsArr}

@@ -36,10 +36,13 @@ code {
 }
 .loginContainer .box{
   position: absolute;
-  top: 50%;  left: 50%;
+  top: 50%;  
+  left: 50%;
   transform: translate(-50%,-50%);
-  width: 50vw;  min-height: 10vh;
-  background: transparent;  color: #fff;
+  width: 50vw;  
+  min-height: 10vh;
+  background: transparent;  
+  color: #fff;
   padding: 50px 20px;
   box-sizing: border-box;
   transition: .9s;
@@ -54,9 +57,10 @@ code {
   font-family: 'Quicksand', sans-serif;
 }
 .loginContainer .box .loginRow{
-  width: 100%;
+  width: 70%;
   margin: 25px 0;
   text-align: center;
+  margin: 25px auto;
 }
 .loginContainer .box .loginRow input{
   border: none;   outline: none;
@@ -166,23 +170,29 @@ code {
   border: 1px solid black;
   border-radius: 20px;
   width: 1000px;
-  height: 200px;
-  background-color: rgb(218, 233, 233);
+  height: 150px;
+  background: linear-gradient(135deg, rgb(247, 245, 245), grey); 
   font-size: 2.5em;
 }
 
 .singleTourImg {
   float: left;
   width: 200px;
-  height: 200px;
+  height: 150px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
-/* .tourCard h4 {
-  clear: both;
-} */
+.tourCard h4 {
+  color: white;
+}
 
-/* .singleTourHeading {
-  float: right;
-} */
+.tourDeetsContainer img {
+ max-height: 900px;
+ max-width: 900px;
+ margin: 50px 250px;
+}
+
+.tourDeetsContainer h1 {
+  text-align: center;
+}
