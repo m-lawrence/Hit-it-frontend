@@ -11,6 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* .mainContainer {
+}
+
+.profileMainContainer {
+  margin-left: 100px;
+  margin-right: 100px;
+} */
 
 /* Login page */
 .loginContainer{
@@ -140,17 +147,41 @@ code {
   width: 50%;
 }
 
+.toursHeader {
+  text-align: center;
+  padding-top: 500px;
+}
+
 .bandProfileTourDiv {
   clear: both;
   text-align: center;
-  padding-top: 50px;;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tourCard {
+  margin-top: 100px;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 1000px;
+  height: 200px;
+  background-color: rgb(218, 233, 233);
+  font-size: 2.5em;
 }
 
 .singleTourImg {
   float: left;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
+
+/* .tourCard h4 {
+  clear: both;
+} */
 
 /* .singleTourHeading {
   float: right;

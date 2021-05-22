@@ -44,15 +44,17 @@ function App() {
       {loggedInUser && <NavBar setLoggedInUser={setLoggedInUser}/>}
       {!loggedInUser ? <Login setLoggedInUser={setLoggedInUser} bands={bands} setTours={setTours}/> : null}
       <Switch>
-        <Route exact path='/profile'>
-         {loggedInUser && <Profile loggedInUser={loggedInUser} addNewTour={addNewTour} tours={tours}/>}
-        </Route>
-        <Route exact path='/tours/:id'>
-         {loggedInUser && <TourDetails venues={venues} />}
-        </Route>
-        <Route exact path='/venues'>
-         {loggedInUser && <Venues setSearchText={setSearchText} venues={filteredVenues} setSearch={setSearch} search={search}/>}
-        </Route>
+        <div className='mainContainer'>
+          <Route exact path='/profile'>
+          {loggedInUser && <Profile loggedInUser={loggedInUser} addNewTour={addNewTour} tours={tours}/>}
+          </Route>
+          <Route exact path='/tours/:id'>
+          {loggedInUser && <TourDetails venues={venues} />}
+          </Route>
+          <Route exact path='/venues'>
+          {loggedInUser && <Venues setSearchText={setSearchText} venues={filteredVenues} setSearch={setSearch} search={search}/>}
+          </Route>
+        </div>
       </Switch>
     </div>
   );

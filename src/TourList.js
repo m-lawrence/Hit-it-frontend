@@ -38,8 +38,8 @@ function TourList({ currentUser, addNewTour, tours }) {
     return (
       <div>
         {toursArr}
-        <div onClick={handleNewTourClick}>
-            <h4>Create new tour!</h4>
+        <div className="tourCard" onClick={handleNewTourClick}>
+            <h4>+ Create new tour!</h4>
         </div>
         {newTourClicked && 
             <div>

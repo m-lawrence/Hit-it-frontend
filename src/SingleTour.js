@@ -11,7 +11,7 @@ function SingleTour({ tour }) {
     }
     
     return (
-      <div onClick={handleTourClick}>
+      <div className="tourCard" onClick={handleTourClick}>
         <img src={tour.image} alt={tour.name} className='singleTourImg'/>
         <h4 className='singleTourHeading'>{tour.name}</h4>
       </div>

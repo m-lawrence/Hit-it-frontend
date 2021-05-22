@@ -5,7 +5,7 @@ function Profile({ loggedInUser, addNewTour, tours }) {
    const currentUser = loggedInUser[0]
   
     return (
-      <div>
+      <div className="profileMainContainer">
         <h1 className='bandProfileHeader'>{currentUser.name}</h1>
         <div className='bandProfileImgDiv'>
             <img className='bandProfileImg' src={currentUser.image} alt={currentUser.name} />
@@ -20,8 +20,10 @@ function Profile({ loggedInUser, addNewTour, tours }) {
             <p>Band members: {currentUser.band_members}</p>
             <p>Bio: {currentUser.bio}</p>
         </div>
+        <div className='toursHeader'>
+            <h2>Our Tours</h2>
+        </div>
         <div className='bandProfileTourDiv'>
-            <h2>Tours</h2>
             <TourList currentUser={currentUser} addNewTour={addNewTour} tours={tours}/>
         </div>
       </div>
