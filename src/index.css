@@ -16,7 +16,7 @@ code {
 .loginContainer{
   position: relative;
   width: 100%;   min-height: 100vh;
-  background: url(https://mk0geketeyorgkvhgr38.kinstacdn.com/wp-content/uploads/2015/12/city-road-street-buildings-1024x673.jpg);
+  background: url(./6.jpeg);
   background-size: 100% 100%;
 }
 .loginContainer::before{
@@ -86,6 +86,7 @@ code {
 }
 
 /* end login */
+
 /* NavBar */
 
 .navBar {
