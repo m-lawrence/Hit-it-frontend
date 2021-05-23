@@ -12,7 +12,7 @@ function Venues({ venues, search, setSearch, setSearchText }) {
     }
 
     return (
-      <div>
+      <div className="venueMainContainer">
         <h1>Search Venues</h1>
         <form className="searchbar" onSubmit={handleSearchSubmit}>
             <input
@@ -24,7 +24,9 @@ function Venues({ venues, search, setSearch, setSearchText }) {
             />
             <button type="submit">Search</button>
         </form>
-        {venuesArr}
+        <div className="venueListDiv">
+            {venuesArr}
+        </div>
       </div>
     );
   }

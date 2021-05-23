@@ -8,8 +8,8 @@ function SingleVenue({ venue }) {
     }
 
     return (
-      <div>
-        <h4>{venue.name}</h4>
+      <div className="venueCard">
+        <p>{venue.name}</p>
         <img src={venue.image} alt={venue.name} />
         <p>{venue.location}</p>
         <button onClick={handleVenueClick}>{venueClicked ? 'Less' : 'More'}</button>

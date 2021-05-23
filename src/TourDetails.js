@@ -91,28 +91,30 @@ function TourDetails({ venues }) {
       <div className="tourDeetsContainer">
         <h1>{location.state.params.name}</h1>
         <img src={location.state.params.image} alt={location.state.params.name}/>
-        {showsArr}
-        <div onClick={handleAddShowClick}>
-            <h4>Add a show!</h4>
+        <div className='tourDeetsShowsDiv'>
+          {showsArr}
+          <div className="showCard" onClick={handleAddShowClick}>
+              <h4>+ Add a show!</h4>
+          </div>
+          {addShowClicked && 
+          <div>
+            <form onSubmit={handleNewShowSubmit}>
+              <label>Date: </label>
+              <input type="date" value={formData.date} name="date" onChange={handleChange}></input>
+              <label>Location: </label>
+                <input type="text" value={formData.location} name="location" onChange={handleChange}></input>
+                <label>Time: </label>
+                <input type="time" value={formData.time} name="time" onChange={handleChange}></input>
+                <label>Venue: </label>
+                <input type="text" value={formData.venue} name="venue" onChange={handleChange}></input>
+                <label>Other bands: </label>
+                <input type="text" value={formData.other_bands} name="other_bands" onChange={handleChange}></input>
+                <label>Details: </label>
+                <input type="text" value={formData.details} name="details" onChange={handleChange}></input>
+                <input type="submit"></input>
+            </form>
+          </div>}
         </div>
-        {addShowClicked && 
-        <div>
-          <form onSubmit={handleNewShowSubmit}>
-            <label>Date: </label>
-            <input type="date" value={formData.date} name="date" onChange={handleChange}></input>
-            <label>Location: </label>
-               <input type="text" value={formData.location} name="location" onChange={handleChange}></input>
-               <label>Time: </label>
-               <input type="time" value={formData.time} name="time" onChange={handleChange}></input>
-               <label>Venue: </label>
-               <input type="text" value={formData.venue} name="venue" onChange={handleChange}></input>
-               <label>Other bands: </label>
-               <input type="text" value={formData.other_bands} name="other_bands" onChange={handleChange}></input>
-               <label>Details: </label>
-               <input type="text" value={formData.details} name="details" onChange={handleChange}></input>
-               <input type="submit"></input>
-          </form>
-        </div>}
       </div>
     );
   }

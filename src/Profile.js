@@ -11,14 +11,14 @@ function Profile({ loggedInUser, addNewTour, tours }) {
             <img className='bandProfileImg' src={currentUser.image} alt={currentUser.name} />
         </div>
         <div className='bandInfo'>
-            <p>Email: {currentUser.email}</p>
-            <p>Website: {currentUser.website}</p>
-            <p>Facebook: {currentUser.facebook}</p>
-            <p>Music: {currentUser.music_link}</p>
-            <p>Genre: {currentUser.genre}</p>
-            <p>Location: {currentUser.location}</p>
-            <p>Band members: {currentUser.band_members}</p>
-            <p>Bio: {currentUser.bio}</p>
+            <p><span className="profSpan">Email: </span>{currentUser.email}</p>
+            <p><span className="profSpan">Website: </span>{currentUser.website}</p>
+            <p><span className="profSpan">Facebook: </span>{currentUser.facebook}</p>
+            <p><span className="profSpan">Music: </span>{currentUser.music_link}</p>
+            <p><span className="profSpan">Genre: </span>{currentUser.genre}</p>
+            <p><span className="profSpan">Location: </span>{currentUser.location}</p>
+            <p><span className="profSpan">Band members: </span>{currentUser.band_members}</p>
+            <p><span className="profSpan">Bio: </span>{currentUser.bio}</p>
         </div>
         <div className='toursHeader'>
             <h2>Our Tours</h2>

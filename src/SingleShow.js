@@ -60,12 +60,12 @@ function SingleShow({ show, venue, removeShow, updateShow }) {
     }
   
     return (
-      <div>
+      <div className="showCard">
         <p>{show.date}</p>
         <p>{show.location}</p>
         <p>{show.time}</p>
         <p>{venue[0].name}</p>
-        <button onClick={handleShowClick}>{showClicked ? 'Less' : 'More'}</button>
+        <button onClick={handleShowClick}>{showClicked ? '➖' : '➕'}</button>
         {showClicked &&
          <div>
            <p>With: {show.other_bands}</p>
