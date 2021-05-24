@@ -24,6 +24,9 @@ function TourDetails({ venues }) {
     })}/>
   })
   
+  const showsByDate = showsArr.sort((a,b) => Date.parse(a.props.show.date) - Date.parse(b.props.show.date))
+ 
+
   function handleAddShowClick() {
     setAddShowClicked(addShowClicked => !addShowClicked)
   }
