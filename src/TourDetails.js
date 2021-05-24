@@ -40,14 +40,10 @@ function TourDetails({ venues }) {
   }
 
   function getVenueId() {
-    // console.log(newVenue)
     const theVenue = venues.filter(venue => {
-      return venue.name.includes(newVenue) 
+      return venue.name.toLowerCase().includes(newVenue.toLowerCase()) 
     })
-    // const moreShows = location.state.params.shows.push(theVenue)
-    // setShows(moreShows)
-    // console.log(theVenue[0].id)
-    setNewVenueID(theVenue[0].id)
+      setNewVenueID(theVenue[0].id)
   }
 
   function handleNewShowSubmit(e) {
@@ -57,7 +53,7 @@ function TourDetails({ venues }) {
       date:formData.date,
       location:formData.location,
       time:formData.time,
-      venue_id:newVenueId,
+      venue_id:newVenueId ? newVenueId : 1,
       other_bands:formData.other_bands,
       details:formData.details,
       tour_id: location.state.params.id

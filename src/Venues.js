@@ -2,7 +2,10 @@ import React from 'react';
 import SingleVenue from './SingleVenue';
 
 function Venues({ venues, search, setSearch, setSearchText }) {
-    const venuesArr = venues.map(venue => {
+    const removedTbd = venues.filter(venue => {
+        return venue.name !== "TBD"
+    })
+    const venuesArr = removedTbd.map(venue => {
         return <SingleVenue key={venue.id} venue={venue} />
     })
 
