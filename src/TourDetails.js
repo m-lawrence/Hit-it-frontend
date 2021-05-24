@@ -19,7 +19,7 @@ function TourDetails({ venues }) {
 
 
   const showsArr = location.state.params.shows.map(show => {
-    return <SingleShow key={show.id} show={show} removeShow={removeShow} updateShow={updateShow} venue={venues.filter(venue => {
+    return <SingleShow key={show.id} show={show} removeShow={removeShow} updateShow={updateShow} venues={venues} venue={venues.filter(venue => {
       return venue.id === show.venue_id
     })}/>
   })

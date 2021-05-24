@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import moment from 'moment'
 
-function SingleShow({ show, venue, removeShow, updateShow }) {
+function SingleShow({ show, venue, removeShow, updateShow, venues }) {
     const [showClicked, setShowClicked] = useState(false)
     const [showEditClicked, setShowEditClicked] = useState(false)
+    const [editedVenue, setEditedVenue] = useState("")
+    const [editedVenueId, setEditedVenueID] = useState(venue)
     const [editFormData, setEditFormData] = useState({
         date: show.date,
         location: show.location,
         time: show.time,
-        venue: show.venue,
         other_bands: show.other_bands,
         details: show.details
     })
@@ -39,7 +40,7 @@ function SingleShow({ show, venue, removeShow, updateShow }) {
             other_bands:editFormData.other_bands,
             details:editFormData.details,
             tour_id: show.tour_id,
-            venue_id: show.venue_id
+            venue_id: editedVenueId ? editedVenueId : 1
         }
 
         fetch(`http://localhost:3000/shows/${show.id}`, {
@@ -58,6 +59,18 @@ function SingleShow({ show, venue, removeShow, updateShow }) {
         setEditFormData({...editFormData, 
             [e.target.name] : e.target.value
         })
+    }
+
+    function handleEditVenueChange(e) {
+        setEditedVenue(e.target.value)
+        getEditedVenueId()
+    }
+
+    function getEditedVenueId() {
+        const theVenue = venues.filter(venue => {
+            return venue.name.toLowerCase().includes(editedVenue.toLowerCase()) 
+          })
+            setEditedVenueID(theVenue[0].id)
     }
   
     return (
@@ -84,7 +97,7 @@ function SingleShow({ show, venue, removeShow, updateShow }) {
                <label>Time: </label>
                <input type="time" name="time" value={editFormData.time} onChange={handleEditShowChange}></input>
                <label>Venue: </label>
-               <input type="text" name="venue" value={editFormData.venue} onChange={handleEditShowChange}></input>
+               <input type="text" name="venue" value={editedVenue} onChange={handleEditVenueChange}></input>
                <label>Other bands: </label>
                <input type="text" name="other_bands" value={editFormData.other_bands} onChange={handleEditShowChange}></input>
                <label>Details: </label>
