@@ -2,18 +2,21 @@ import React, { useState } from 'react';
 import { useLocation} from 'react-router-dom'
 import SingleShow from './SingleShow';
 
+
 function TourDetails({ venues }) {
   const location = useLocation()
   const [addShowClicked, setAddShowClicked] = useState(false)
   const [shows, setShows] = useState([])
+  const [newVenue, setNewVenue] = useState("")
+  const [newVenueId, setNewVenueID] = useState("")
   const [formData, setFormData] = useState({
     date:"",
     location:"",
     time:"",
-    venue:"",
     other_bands:"",
     details:""
 })
+
 
   const showsArr = location.state.params.shows.map(show => {
     return <SingleShow key={show.id} show={show} removeShow={removeShow} updateShow={updateShow} venue={venues.filter(venue => {
@@ -29,22 +32,35 @@ function TourDetails({ venues }) {
     setFormData({...formData, 
       [e.target.name] : e.target.value
   })
+  }
 
+  function handleVenueChange(e) {
+    setNewVenue(e.target.value)
+    getVenueId()
+  }
+
+  function getVenueId() {
+    // console.log(newVenue)
+    const theVenue = venues.filter(venue => {
+      return venue.name.includes(newVenue) 
+    })
+    // const moreShows = location.state.params.shows.push(theVenue)
+    // setShows(moreShows)
+    // console.log(theVenue[0].id)
+    setNewVenueID(theVenue[0].id)
   }
 
   function handleNewShowSubmit(e) {
     e.preventDefault()
-
-
+   
     const newShow = {
       date:formData.date,
       location:formData.location,
       time:formData.time,
-      venue:formData.venue,
+      venue_id:newVenueId,
       other_bands:formData.other_bands,
       details:formData.details,
-      tour_id: location.state.params.id,
-      venue_id: 1
+      tour_id: location.state.params.id
     }
 
     fetch('http://localhost:3000/shows', {
@@ -106,7 +122,7 @@ function TourDetails({ venues }) {
                 <label>Time: </label>
                 <input type="time" value={formData.time} name="time" onChange={handleChange}></input>
                 <label>Venue: </label>
-                <input type="text" value={formData.venue} name="venue" onChange={handleChange}></input>
+                <input type="text" value={newVenue} name="venue" onChange={handleVenueChange}></input>
                 <label>Other bands: </label>
                 <input type="text" value={formData.other_bands} name="other_bands" onChange={handleChange}></input>
                 <label>Details: </label>

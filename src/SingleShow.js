@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import moment from 'moment'
 
 function SingleShow({ show, venue, removeShow, updateShow }) {
     const [showClicked, setShowClicked] = useState(false)
@@ -11,6 +12,7 @@ function SingleShow({ show, venue, removeShow, updateShow }) {
         other_bands: show.other_bands,
         details: show.details
     })
+
 
     function handleShowClick() {
         setShowClicked(showClicked => !showClicked)
@@ -47,8 +49,7 @@ function SingleShow({ show, venue, removeShow, updateShow }) {
             },
             body: JSON.stringify(updatedShow)
         })
-            // .then(response => response.json())
-            // .then(data => updateShow(data))
+    
            const readyShow = {...updatedShow, id: show.id}
            updateShow(readyShow)
     }
@@ -61,9 +62,9 @@ function SingleShow({ show, venue, removeShow, updateShow }) {
   
     return (
       <div className="showCard">
-        <p>{show.date}</p>
+        <p>{moment(show.date).format("MM-DD-YY")}</p>
         <p>{show.location}</p>
-        <p>{show.time}</p>
+        <p>{moment(show.time).format("LT")}</p>
         <p>{venue[0].name}</p>
         <button onClick={handleShowClick}>{showClicked ? '➖' : '➕'}</button>
         {showClicked &&
