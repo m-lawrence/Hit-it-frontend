@@ -14,6 +14,7 @@ function App() {
   const [search, setSearch] = useState("")
   const [searchText, setSearchText] = useState("")
   const [tours, setTours] = useState([])
+  const [selectedVenueCategory, setSelectedVenueCategory] = useState("All")
  
   useEffect(() => {
     fetch('http://localhost:3000/band_users')
@@ -35,6 +36,14 @@ function App() {
       }
     })
 
+    const filteredByCatVenues = filteredVenues.filter(venue => {
+      if (venue.category === selectedVenueCategory) {
+        return venue
+      } else if (selectedVenueCategory === "All")
+        return venue
+    })
+
+
   function addNewTour(tourObj) {
     setTours([...tours, tourObj])
   }
@@ -52,7 +61,7 @@ function App() {
           {loggedInUser && <TourDetails venues={venues} />}
           </Route>
           <Route exact path='/venues'>
-          {loggedInUser && <Venues setSearchText={setSearchText} venues={filteredVenues} setSearch={setSearch} search={search}/>}
+          {loggedInUser && <Venues setSearchText={setSearchText} venues={filteredByCatVenues} setSearch={setSearch} search={search} setSelectedVenueCategory={setSelectedVenueCategory}/>}
           </Route>
         </div>
       </Switch>

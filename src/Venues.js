@@ -1,7 +1,8 @@
 import React from 'react';
 import SingleVenue from './SingleVenue';
+import VenueCatFilter from './VenueCatFilter';
 
-function Venues({ venues, search, setSearch, setSearchText }) {
+function Venues({ venues, search, setSearch, setSearchText, setSelectedVenueCategory }) {
     const removedTbd = venues.filter(venue => {
         return venue.name !== "TBD"
     })
@@ -27,6 +28,7 @@ function Venues({ venues, search, setSearch, setSearchText }) {
             />
             <button type="submit">Search</button>
         </form>
+        <VenueCatFilter setSelectedVenueCategory={setSelectedVenueCategory} />
         <div className="venueListDiv">
             {venuesArr}
         </div>
