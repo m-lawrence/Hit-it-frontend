@@ -5,6 +5,7 @@ import Login from './Login'
 import Profile from './Profile'
 import Venues from './Venues'
 import TourDetails from './TourDetails'
+import Calls from './Calls';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   const [searchText, setSearchText] = useState("")
   const [tours, setTours] = useState([])
   const [selectedVenueCategory, setSelectedVenueCategory] = useState("All")
+  const [calls, setCalls] = useState([])
  
   useEffect(() => {
     fetch('http://localhost:3000/band_users')
@@ -28,7 +30,11 @@ function App() {
       .then(setVenues)
   }, [])
 
-
+  useEffect(() => {
+    fetch('http://localhost:3000/calls')
+      .then(res => res.json())
+      .then(setCalls)
+  }, [])
  
     const filteredVenues = venues.filter(venue => {
       if (venue.location.toLowerCase().includes(searchText.toLowerCase())) {
@@ -62,6 +68,9 @@ function App() {
           </Route>
           <Route exact path='/venues'>
           {loggedInUser && <Venues setSearchText={setSearchText} venues={filteredByCatVenues} setSearch={setSearch} search={search} setSelectedVenueCategory={setSelectedVenueCategory}/>}
+          </Route>
+          <Route exact path='/calls'>
+          {loggedInUser && <Calls calls={calls}/>}
           </Route>
         </div>
       </Switch>
