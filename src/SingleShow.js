@@ -50,9 +50,11 @@ function SingleShow({ show, venue, removeShow, updateShow, venues }) {
             },
             body: JSON.stringify(updatedShow)
         })
+            .then(r => r.json())
+            .then(updateShow)
     
-           const readyShow = {...updatedShow, id: show.id}
-           updateShow(readyShow)
+        //    const readyShow = {...updatedShow, id: show.id}
+        //    updateShow(readyShow)
     }
 
     function handleEditShowChange(e) {

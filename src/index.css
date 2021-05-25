@@ -198,7 +198,8 @@ code {
 }
 
 .tourCard:hover {
-  background-color: #52b4b9;
+  /* background-color: #52b4b9; */
+ background-color: #D9D9D9;
 }
 
 .singleTourImg {
@@ -242,7 +243,8 @@ code {
 }
 
 .showCard:hover {
-  background-color: #52b4b9;
+  /* background-color: #52b4b9; */
+  background-color: #D9D9D9;
 }
 
 .showCard h4 {
@@ -309,5 +311,6 @@ code {
 }
 
 .venueCard:hover {
-  background-color: #52b4b9;
+  /* background-color: #52b4b9; */
+  background-color: #D9D9D9;
 } 
