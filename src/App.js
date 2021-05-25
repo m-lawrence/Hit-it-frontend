@@ -54,6 +54,10 @@ function App() {
     setTours([...tours, tourObj])
   }
 
+  function addNewCall(callObj) {
+    setCalls([...calls, callObj])
+  }
+
   return (
     <div>
       {loggedInUser && <NavBar setLoggedInUser={setLoggedInUser}/>}
@@ -70,7 +74,7 @@ function App() {
           {loggedInUser && <Venues setSearchText={setSearchText} venues={filteredByCatVenues} setSearch={setSearch} search={search} setSelectedVenueCategory={setSelectedVenueCategory}/>}
           </Route>
           <Route exact path='/calls'>
-          {loggedInUser && <Calls calls={calls} loggedInUser={loggedInUser}/>}
+          {loggedInUser && <Calls calls={calls} loggedInUser={loggedInUser} addNewCall={addNewCall}/>}
           </Route>
         </div>
       </Switch>

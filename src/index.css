@@ -435,3 +435,7 @@ code {
   margin-left: 90%;
 }
 
+.callsSearchDiv ::placeholder {
+  color: grey;
+  text-transform: capitalize;
+}
