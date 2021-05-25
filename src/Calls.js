@@ -31,7 +31,7 @@ function Calls({ calls, loggedInUser, addNewCall }) {
             <img className="addIcon" src={addIcon} onClick={handleModalClick}/>
             {modalClicked && <CallFormModal setModalClicked={setModalClicked} loggedInUser={loggedInUser} addNewCall={addNewCall}/>}
           </div>
-        <h1 className="callsHeader">Calls for {loggedInUser[0].location}</h1>
+        <h1 className="callsHeader">Calls for {callSearchText}</h1>
         <CallsSearch callSearch={callSearch} setCallSearch={setCallSearch} setCallSearchText={setCallSearchText}/>
         <div className="callsDiv">
             {callsArr}
