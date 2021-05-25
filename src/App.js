@@ -70,7 +70,7 @@ function App() {
           {loggedInUser && <Venues setSearchText={setSearchText} venues={filteredByCatVenues} setSearch={setSearch} search={search} setSelectedVenueCategory={setSelectedVenueCategory}/>}
           </Route>
           <Route exact path='/calls'>
-          {loggedInUser && <Calls calls={calls}/>}
+          {loggedInUser && <Calls calls={calls} loggedInUser={loggedInUser}/>}
           </Route>
         </div>
       </Switch>

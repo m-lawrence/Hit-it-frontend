@@ -176,20 +176,33 @@ code {
   padding-top: 450px;
 }
 
-.bandProfileTourDiv {
+/* .bandProfileTourDiv {
+  clear: both;
+  text-align: center;
+  /* padding-top: 50px; */
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+} */ 
+
+.tourListDiv {
   clear: both;
   text-align: center;
   /* padding-top: 50px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .tourCard {
   margin-top: 50px;
   border: 1px solid black;
   border-radius: 20px;
-  width: 800px;
+  width: 80%;
   height: 100px;
   /* background: linear-gradient(135deg, rgb(247, 245, 245), grey);  */
   font-size: 2.5em;
@@ -229,7 +242,7 @@ code {
   margin-top: 50px;
   border: 1px solid black;
   border-radius: 20px;
-  width: 800px;
+  width: 80%;
   height: 100px;
   /* background: linear-gradient(135deg, rgb(247, 245, 245), grey);  */
   /* font-size: 2.5em; */
@@ -269,11 +282,18 @@ code {
   margin-left: 20px;
 } 
 
+.venueListDiv {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .venueCard {
   margin-top: 50px;
   border: 1px solid black;
   border-radius: 20px;
-  width: 800px;
+  width: 80%;
   height: 100px;
   /* background: linear-gradient(135deg, rgb(247, 245, 245), grey);  
   /* font-size: 2.5em; */
@@ -340,7 +360,8 @@ code {
   margin-top: 50px;
   border: 1px solid black;
   border-radius: 20px;
-  width: 800px;
+  /* width: 800px; */
+  width: 80%;
   height: 100px;
   /* background: linear-gradient(135deg, rgb(247, 245, 245), grey);  */
   background-color: white;
