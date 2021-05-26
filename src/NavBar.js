@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import HILogo from './Hit-It-logo.png'
 
 function NavBar({ setLoggedInUser }) {
 
@@ -10,7 +11,7 @@ function NavBar({ setLoggedInUser }) {
     return (
       <div className='navBar'>
           <div className='logo'>
-              <h2>Hit It</h2>
+              <img className="logoImg" src={HILogo}/>
           </div>
           <ul>
             <li><NavLink to="/profile" exact>My Page</NavLink></li>

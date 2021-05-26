@@ -1,5 +1,6 @@
 import React, { useState  } from 'react';
 import { useHistory } from 'react-router-dom';
+import HILogo from './Hit-It-logo.png'
 
 function Login({ setLoggedInUser, bands, setTours }) {
     const [email, setEmail] = useState("")
@@ -21,7 +22,8 @@ function Login({ setLoggedInUser, bands, setTours }) {
     return (
       <div className="loginContainer">
         <div className='box'>
-            <h1>Sign in</h1>
+            {/* <img className="loginLogo" src={HILogo} /> */}
+            <h1><img className="loginLogo" src={HILogo} /></h1>
             <form onSubmit={handleLoginSubmit}>
                 <div className='loginRow'>
                     <input type="text" name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}></input>

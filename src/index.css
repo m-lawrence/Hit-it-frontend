@@ -72,8 +72,13 @@ code {
 .loginContainer .box:hover{
   background: rgba(255,255,255,.2);
 }
+
+.loginLogo {
+  height: 175px;
+}
+
 .loginContainer .box h1{
-  font-size: 40px;
+  /* font-size: 40px; */
   text-align: center;  
   text-transform: uppercase;
   font-family: 'Quicksand', sans-serif;
@@ -127,7 +132,7 @@ code {
   /* background: linear-gradient(135deg, violet, teal);  */
   background: linear-gradient(135deg, #52b4b9, #284B63); 
   justify-content: space-around;
-  padding:20px 0;
+  padding:10px 0;
   color:rgb(255, 254, 254);
   align-items: center;
   }
@@ -150,6 +155,10 @@ code {
     color:#fff;
     text-decoration: none;
     font-size: 1em;
+  }
+
+  .logoImg {
+    max-height: 75px;
   }
   
 /* nav end */
@@ -399,6 +408,10 @@ code {
   max-height: 100px;
   margin-top: 20px;
   float: right;
+}
+
+.addIcon:hover {
+  opacity: 80%;
 }
 
 /* call form modal */
