@@ -20,8 +20,8 @@ function Profile({ loggedInUser, addNewTour, tours }) {
             <p><span className="profSpan">Band members: </span>{currentUser.band_members}</p>
             <p><span className="profSpan">Bio: </span>{currentUser.bio}</p>
         </div>
-        <div className='toursHeader'>
-            <h2>Our Tours</h2>
+        <div className='toursHeaderDiv'>
+            <h2 className='toursHeader'>Our Tours</h2>
         </div>
         <div className='bandProfileTourDiv'>
             <TourList currentUser={currentUser} addNewTour={addNewTour} tours={tours}/>

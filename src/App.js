@@ -59,7 +59,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="bigContainer">
       {loggedInUser && <NavBar setLoggedInUser={setLoggedInUser}/>}
       {!loggedInUser ? <Login setLoggedInUser={setLoggedInUser} bands={bands} setTours={setTours}/> : null}
       <Switch>
