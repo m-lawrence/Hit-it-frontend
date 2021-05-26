@@ -72,6 +72,7 @@ function TourDetails({ venues }) {
         .then(res => res.json())
         .then(addNewShow)
     
+        setAddShowClicked(false)
   }
 
   function addNewShow(showObj) {

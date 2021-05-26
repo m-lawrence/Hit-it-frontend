@@ -33,6 +33,7 @@ function TourList({ currentUser, addNewTour, tours }) {
             .then(res => res.json())
             .then(addNewTour)
 
+            setNewTourClicked(false)
     }
    
     return (

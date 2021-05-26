@@ -53,6 +53,7 @@ function SingleShow({ show, venue, removeShow, updateShow, venues }) {
             .then(r => r.json())
             .then(updateShow)
     
+            setShowEditClicked(false)
         //    const readyShow = {...updatedShow, id: show.id}
         //    updateShow(readyShow)
     }
