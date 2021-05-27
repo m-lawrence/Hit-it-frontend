@@ -303,11 +303,18 @@ code {
 .venueMainContainer h1 {
   text-align: center;
   width: 100%;
+  font-weight: 400;
+  padding-bottom: 20px;
 }
 
 .venueMainContainer .searchbar {
   padding-right: 20px;
+  padding-left: 20px;
 } 
+
+/* .venueFilterDiv {
+  padding-left: 20px;
+} */
 
 .venueListDiv {
   width: 100%;
@@ -322,8 +329,6 @@ code {
   border-radius: 20px;
   width: 80%;
   height: 100px;
-  /* background: linear-gradient(135deg, rgb(247, 245, 245), grey);  
-  /* font-size: 2.5em; */
   background-color: white;
   color: #353535;
 } 
@@ -344,7 +349,6 @@ code {
 .venueMainContainer {
   clear: both;
   text-align: center; 
-  /* padding-top: 50px; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -354,18 +358,17 @@ code {
 
 .venueCard p {
   display: inline;
-  /* padding: 20px; */
 }
 
 .venueCard:hover {
-  /* background-color: #52b4b9; */
   background-color: #D9D9D9;
 } 
+
+/* calls page */
 
 .callsDiv {
   clear: both;
   text-align: center;
-  /* padding-top: 50px; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -470,4 +473,34 @@ code {
 .callsSearchDiv ::placeholder {
   color: grey;
   text-transform: capitalize;
+}
+
+/* venues map */
+
+/* .venueMap {
+ 
+} */
+
+.marker-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.marker-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.mapPopup {
+  color: black;
+}
+
+.mapPopup h1 {
+  font-size: .75em;
+}
+
+.mapPopup img {
+  max-width: 90px;
+  max-height: 90px;
 }

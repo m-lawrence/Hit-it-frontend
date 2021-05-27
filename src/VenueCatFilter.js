@@ -7,7 +7,7 @@ function VenueCatFilter({ setSelectedVenueCategory }) {
     }
 
     return (
-      <div>
+      <div className="venueFilterDiv">
         <label>Type of venue: </label>
             <select className="select" onChange={handleVenueCatChange}>
                 <option value="All">All</option>
