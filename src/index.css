@@ -302,10 +302,11 @@ code {
 
 .venueMainContainer h1 {
   text-align: center;
+  width: 100%;
 }
 
 .venueMainContainer .searchbar {
-  margin-left: 20px;
+  padding-right: 20px;
 } 
 
 .venueListDiv {

@@ -1,6 +1,7 @@
 import React from 'react';
 import SingleVenue from './SingleVenue';
 import VenueCatFilter from './VenueCatFilter';
+import VenueMap from './VenueMap';
 
 function Venues({ venues, search, setSearch, setSearchText, setSelectedVenueCategory }) {
     const removedTbd = venues.filter(venue => {
@@ -18,6 +19,7 @@ function Venues({ venues, search, setSearch, setSearchText, setSelectedVenueCate
     return (
       <div className="venueMainContainer">
         <h1>Search Venues</h1>
+        <VenueMap venuesToMap={removedTbd}/>
         <form className="searchbar" onSubmit={handleSearchSubmit}>
             <input
                 type="text"
