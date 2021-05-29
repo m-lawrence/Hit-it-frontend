@@ -23,14 +23,22 @@ function Venues({ venues, search, setSearch, setSearchText, searchText,setSelect
     function handleSearchSubmit(e) {
         e.preventDefault()
         setSearchText(search)
-        if (search === 'atlanta') {
+        if (search.toLowerCase() === 'atlanta') {
             const coords = [33.77990525357063, -84.41649324950257]
             return setMapCoordinates(coords)
-        } else if (search === 'asheville') {
+        } else if (search.toLowerCase() === 'asheville') {
             const coords = [35.58884248434797, -82.56472777557953]
             return setMapCoordinates(coords)
+        } else if (search.toLowerCase() === 'raleigh') {
+            const coords = [35.830048620384105, -78.64163165285372]
+            return setMapCoordinates(coords)
+        } else if (search.toLowerCase() === 'chattanooga') {
+            const coords = [35.04651379541796, -85.28951243407434]
+            return setMapCoordinates(coords)
+        } else if (search.toLowerCase() === 'athens') {
+            const coords = [33.95422253438973, -83.36474904377586]
+            return setMapCoordinates(coords)
         }
- 
     }
    
     useEffect(() => {
