@@ -113,7 +113,14 @@ function TourDetails({ venues }) {
               <h4>+ Add a show!</h4>
           </div>
           {addShowClicked && 
-          <div>
+          <div className="show-form-modal">
+            <div className="show-form-modal-content">
+                <button onClick={handleAddShowClick} type="button" className="btn-close" aria-label="Close"></button>
+                <div className="show-form-modal-header">
+                    <h4 className="show-form-modal-title">Start planning a new show!</h4>
+                </div>
+                <div className="show-form-modal-body">
+                    <div className="input-group">
             <form onSubmit={handleNewShowSubmit}>
               <label>Date: </label>
               <input type="date" value={formData.date} name="date" onChange={handleChange}></input>
@@ -127,8 +134,11 @@ function TourDetails({ venues }) {
                 <input type="text" value={formData.other_bands} name="other_bands" onChange={handleChange}></input>
                 <label>Details: </label>
                 <input type="text" value={formData.details} name="details" onChange={handleChange}></input>
-                <input type="submit"></input>
+                <button type="submit" className="bottom-btn">Creat show</button>
             </form>
+            </div>
+            </div>
+            </div>
           </div>}
         </div>
       </div>

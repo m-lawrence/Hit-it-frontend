@@ -504,3 +504,108 @@ code {
   max-width: 90px;
   max-height: 90px;
 }
+
+/* tour form modal */
+
+.tour-form-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.tour-form-modal-content{
+  width: 500px;
+  height: 400px;
+  background-color: #fff;
+  color: #353535;
+  text-align: center;
+}
+
+
+.tour-form-modal-header {
+  padding: 10px;
+}
+
+.tour-form-modal-title{
+  margin: 0;
+}
+
+.tour-form-modal-body{
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  height: 250px;
+}
+
+.tour-form-modal-body .input-group{
+  padding: 10px;
+}
+
+.tour-form-modal-body .bottom-btn{
+  margin-top: 20px;
+}
+
+.tour-form-modal-content .btn-close{
+  margin-top: 10px;
+  margin-left: 90%;
+}
+
+/* new show form modal  */
+
+
+.show-form-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.show-form-modal-content{
+  width: 500px;
+  height: 400px;
+  background-color: #fff;
+  color: #353535;
+  text-align: center;
+}
+
+
+.show-form-modal-header {
+  padding: 10px;
+}
+
+.show-form-modal-title{
+  margin: 0;
+}
+
+.show-form-modal-body{
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  height: 250px;
+}
+
+.show-form-modal-body .input-group{
+  padding: 10px;
+}
+
+.show-form-modal-body .bottom-btn{
+  margin-top: 20px;
+}
+
+.show-form-modal-content .btn-close{
+  margin-top: 10px;
+  margin-left: 90%;
+}
