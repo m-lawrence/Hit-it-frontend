@@ -57,7 +57,7 @@ function CallFormModal ({ setModalClicked, loggedInUser, addNewCall }){
                     <div className="input-group">
                         <form onSubmit={handleCallSubmit}>
                             <label>Location: </label>
-                            <input type="text" name="location" value={callFormData.location} onChange={handleCallFormChange}></input><br></br><br></br>
+                            <input className="locationInput" type="text" name="location" value={callFormData.location} onChange={handleCallFormChange}></input><br></br><br></br>
                             <label>Date: </label>
                             <input type="date" name="date" value={callFormData.date} onChange={handleCallFormChange}></input><br></br><br></br>
                             <label>Time: </label>

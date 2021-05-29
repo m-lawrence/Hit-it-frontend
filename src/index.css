@@ -447,15 +447,16 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .call-form-modal-content{
   width: 500px;
   height: 400px;
-  background-color: #fff;
-  color: #353535;
+  background-color: #52b4b9;
+  /* color: #353535; */
+  color: #white;
   text-align: center;
+  border-radius: 20px;
 }
 
 
@@ -470,7 +471,7 @@ code {
 .call-form-modal-body{
   padding: 10px;
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid #eee; */
   height: 250px;
 }
 
@@ -478,8 +479,23 @@ code {
   padding: 10px;
 }
 
+.call-form-modal-body input {
+  background-color: #D9D9D9;
+  border-radius: 20px;
+}
+
+.call-form-modal-body .locationInput {
+ 
+}
+
 .call-form-modal-body .bottom-btn{
-  margin-top: 20px;
+  background-color: #284B63;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 200px;
+  height: 60px;
+  margin-top: 40px;
 }
 
 .call-form-modal-content .btn-close{
@@ -494,9 +510,6 @@ code {
 
 /* venues map */
 
-/* .venueMap {
- 
-} */
 
 .marker-btn {
   background: none;
@@ -540,9 +553,10 @@ code {
 .tour-form-modal-content{
   width: 500px;
   height: 400px;
-  background-color: #fff;
-  color: #353535;
+  background-color: #52b4b9;
+  color: #white;
   text-align: center;
+  border-radius: 20px;
 }
 
 
@@ -557,7 +571,7 @@ code {
 .tour-form-modal-body{
   padding: 10px;
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid #eee; */
   height: 250px;
 }
 
@@ -565,8 +579,19 @@ code {
   padding: 10px;
 }
 
+.tour-form-modal-body input {
+  background-color: #D9D9D9;
+  border-radius: 20px;
+}
+
 .tour-form-modal-body .bottom-btn{
-  margin-top: 20px;
+  background-color: #284B63;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 200px;
+  height: 60px;
+  margin-top: 40px;
 }
 
 .tour-form-modal-content .btn-close{
@@ -593,9 +618,10 @@ code {
 .show-form-modal-content{
   width: 500px;
   height: 400px;
-  background-color: #fff;
-  color: #353535;
+  background-color: #52b4b9;
+  color: #white;
   text-align: center;
+  border-radius: 20px;
 }
 
 
@@ -610,7 +636,7 @@ code {
 .show-form-modal-body{
   padding: 10px;
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid #eee; */
   height: 250px;
 }
 
@@ -618,8 +644,19 @@ code {
   padding: 10px;
 }
 
+.show-form-modal-body input {
+  background-color: #D9D9D9;
+  border-radius: 20px;
+}
+
 .show-form-modal-body .bottom-btn{
-  margin-top: 20px;
+  background-color: #284B63;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 200px;
+  height: 60px;
+  margin-top: 40px;
 }
 
 .show-form-modal-content .btn-close{
