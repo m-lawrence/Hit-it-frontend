@@ -7,18 +7,20 @@ function Profile({ loggedInUser, addNewTour, tours }) {
     return (
       <div className="profileMainContainer">
         <h1 className='bandProfileHeader'>{currentUser.name}</h1>
-        <div className='bandProfileImgDiv'>
-            <img className='bandProfileImg' src={currentUser.image} alt={currentUser.name} />
-        </div>
-        <div className='bandInfo'>
-            <p><span className="profSpan">Email: </span>{currentUser.email}</p>
-            <p><span className="profSpan">Website: </span>{currentUser.website}</p>
-            <p><span className="profSpan">Facebook: </span>{currentUser.facebook}</p>
-            <p><span className="profSpan">Music: </span>{currentUser.music_link}</p>
-            <p><span className="profSpan">Genre: </span>{currentUser.genre}</p>
-            <p><span className="profSpan">Location: </span>{currentUser.location}</p>
-            <p><span className="profSpan">Band members: </span>{currentUser.band_members}</p>
-            <p><span className="profSpan">Bio: </span>{currentUser.bio}</p>
+        <div className="bandInfoDiv">
+            <div className='bandProfileImgDiv'>
+                <img className='bandProfileImg' src={currentUser.image} alt={currentUser.name} />
+            </div>
+            <div className='bandInfo'>
+                <p><span className="profSpan">Email: </span>{currentUser.email}</p>
+                <p><span className="profSpan">Website: </span>{currentUser.website}</p>
+                <p><span className="profSpan">Facebook: </span>{currentUser.facebook}</p>
+                <p><span className="profSpan">Music: </span>{currentUser.music_link}</p>
+                <p><span className="profSpan">Genre: </span>{currentUser.genre}</p>
+                <p><span className="profSpan">Location: </span>{currentUser.location}</p>
+                <p><span className="profSpan">Band members: </span>{currentUser.band_members}</p>
+                <p><span className="profSpan">Bio: </span>{currentUser.bio}</p>
+            </div>
         </div>
         <div className='toursHeaderDiv'>
             <h2 className='toursHeader'>Our Tours</h2>

@@ -28,14 +28,15 @@ code {
   margin-left: 150px;
   margin-right: 150px;
   color: white;
-  /* font-weight: 600; */
-  /* height: 100vh; */
+  border-radius: 20px;
 }
 
 .profileMainContainer {
   margin-left: 50px;
   margin-right: 50px;
-} */
+} 
+
+
 
 /* Login page */
 .loginContainer{
@@ -165,18 +166,23 @@ code {
 
 .bandProfileHeader {
   text-align: center;
+  padding: 50px;
+}
+
+.bandInfoDiv {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .bandProfileImgDiv {
   float: left;
-  width: 40%;
-  margin-left: 50px;
 }
 
 .bandProfileImg {
   width: 400px;
   height: 400px;
   border: 3px solid white;
+  border-radius: 20px;
 }
 
 .profSpan {
@@ -186,36 +192,20 @@ code {
 
 .bandInfo {
   float: right;
-  width: 50%;
   color: #D9D9D9;
   border: 3px solid white;
-  padding: 10px;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .toursHeaderDiv {
   text-align: center;
-  padding-top: 450px;
+  padding-top: 100px;
 }
-
-/* .toursHeader {
-  font-family: 'Montserrat', sans-serif;
-} */
-
-/* .bandProfileTourDiv {
-  clear: both;
-  text-align: center;
-  /* padding-top: 50px; */
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  flex-wrap: wrap;
-} */ 
 
 .tourListDiv {
   clear: both;
   text-align: center;
-  /* padding-top: 50px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
