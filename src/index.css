@@ -389,12 +389,19 @@ code {
 .callsContainer {
   text-align: center;
   height: 100vh;
+  padding: 50px;
 }
 
-.callsHeader {
+/* .callsHeader {
   display: inline;
   clear: both;
   text-align: center;
+} */
+
+.callsSearchDiv {
+  display: flex;
+  padding: 50px;
+  justify-content: center;
 }
 
 .callCard {
