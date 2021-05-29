@@ -43,11 +43,9 @@ code {
   position: relative;
   width: 100%;   
   min-height: 100vh;
-  /* background: url(./6.jpeg); */
+  background: url(./6.jpeg);
   background-size: 100% 100%;
 }
-
-
 
 .loginContainer::before{
   content: '';
@@ -243,15 +241,21 @@ code {
   display: inline;
 }
 
+.tourDeetsImgDiv {
+  display: flex;
+  justify-content: center;
+}
+
 .tourDeetsContainer img {
  max-height: 900px;
  max-width: 900px;
- margin: 50px 115px;
  border: 3px solid white;
+ border-radius: 20px;
 }
 
 .tourDeetsContainer h1 {
   text-align: center;
+  padding: 50px;
 }
 
 .showCard {
@@ -288,6 +292,7 @@ code {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  padding: 50px;
 }
 
 .venueMainContainer h1 {
