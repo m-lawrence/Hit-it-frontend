@@ -299,7 +299,16 @@ code {
   text-align: center;
   width: 100%;
   font-weight: 400;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
+  padding: 50px;
+}
+
+.venuesSearchContainer {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-flow: column;
+  justify-content: space-evenly;
+  padding: 40px;
 }
 
 .venueMainContainer .searchbar {
@@ -307,11 +316,17 @@ code {
   padding-left: 20px;
 } 
 
+.venueMainContainer .searchbar input::placeholder {
+  color: grey;
+  text-transform: capitalize;
+}
+
 /* .venueFilterDiv {
   padding-left: 20px;
 } */
 
 .venueListDiv {
+  padding: 50px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;

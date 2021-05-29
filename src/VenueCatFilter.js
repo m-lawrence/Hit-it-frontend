@@ -8,7 +8,7 @@ function VenueCatFilter({ setSelectedVenueCategory }) {
 
     return (
       <div className="venueFilterDiv">
-        <label>Type of venue: </label>
+        <label>Type of venue: </label><br></br><br></br>
             <select className="select" onChange={handleVenueCatChange}>
                 <option value="All">All</option>
                 <option value="Dive Bar">Dive bar</option>
