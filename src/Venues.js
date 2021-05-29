@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SingleVenue from './SingleVenue';
 import VenueCatFilter from './VenueCatFilter';
 import VenueMap from './VenueMap';
@@ -30,13 +30,18 @@ function Venues({ venues, search, setSearch, setSearchText, searchText,setSelect
             const coords = [35.58884248434797, -82.56472777557953]
             return setMapCoordinates(coords)
         }
-        
+ 
     }
+   
+    useEffect(() => {
+        setViewport({...viewport, latitude: mapCoordinates[0], longitude: mapCoordinates[1]})
+    }, [mapCoordinates])
+
     
     return (
       <div className="venueMainContainer">
         <h1>Search Venues</h1>
-        <VenueMap venuesToMap={removedTbd} searchText={searchText} mapCoordinates={mapCoordinates} viewport={viewport} setViewport={setViewport}/>
+        <VenueMap key={mapCoordinates[0] + mapCoordinates[1]} venuesToMap={removedTbd} searchText={searchText} mapCoordinates={mapCoordinates} viewport={viewport} setViewport={setViewport}/>
         <form className="searchbar" onSubmit={handleSearchSubmit}>
             <input
                 type="text"
