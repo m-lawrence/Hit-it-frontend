@@ -124,19 +124,21 @@ function TourDetails({ venues }) {
                 <div className="show-form-modal-body">
                   <div className="input-group">
                     <form onSubmit={handleNewShowSubmit}>
-                      <label>Date: </label>
-                      <input type="date" value={formData.date} name="date" onChange={handleChange}></input>
-                      <label>Location: </label>
-                      <input type="text" value={formData.location} name="location" onChange={handleChange}></input>
-                      <label>Time: </label>
-                      <input type="time" value={formData.time} name="time" onChange={handleChange}></input>
-                      <label>Venue: </label>
-                      <input type="text" value={newVenue} name="venue" onChange={handleVenueChange}></input>
-                      <label>Other bands: </label>
-                      <input type="text" value={formData.other_bands} name="other_bands" onChange={handleChange}></input>
-                      <label>Details: </label>
-                      <input type="text" value={formData.details} name="details" onChange={handleChange}></input>
-                      <button type="submit" className="bottom-btn">Creat show</button>
+                    <label className="showFormTimeLabel">Time: </label>
+                      <input type="time" value={formData.time} name="time" onChange={handleChange}></input><br></br><br></br>
+                      <label className="showFormDateLabel">Date: </label>
+                      <input type="date" value={formData.date} name="date" onChange={handleChange}></input><br></br><br></br>
+                      <label className="showFormLocationLabel">Location: </label>
+                      <input type="text" value={formData.location} name="location" onChange={handleChange}></input><br></br><br></br>
+                      {/* <label className="showFormTimeLabel">Time: </label>
+                      <input type="time" value={formData.time} name="time" onChange={handleChange}></input><br></br><br></br> */}
+                      <label className="showFormVenueLabel">Venue: </label>
+                      <input type="text" value={newVenue} name="venue" onChange={handleVenueChange}></input><br></br><br></br>
+                      <label className="showFormBandsLabel">Other bands: </label>
+                      <input type="text" value={formData.other_bands} name="other_bands" onChange={handleChange}></input><br></br><br></br>
+                      <label className="showFormDetailsLabel">Details: </label>
+                      <input type="text" value={formData.details} name="details" onChange={handleChange}></input><br></br><br></br>
+                      <button type="submit" className="bottom-btn">Create show</button>
                     </form>
                  </div>
                 </div>

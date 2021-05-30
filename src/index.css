@@ -675,6 +675,25 @@ code {
   border-radius: 20px;
 }
 
+.showFormDateLabel {
+  padding-right: 50px;
+}
+.showFormLocationLabel {
+  padding-right: 25px;
+}
+.showFormTimeLabel {
+  padding-right: 100px;
+}
+.showFormVenueLabel {
+  padding-right: 40px;
+}
+.showFormBandsLabel {
+
+}
+.showFormDetailsLabel {
+  padding-right: 40px;
+}
+
 .show-form-modal-body .bottom-btn{
   background-color: #284B63;
   color: white;
@@ -682,7 +701,7 @@ code {
   border-radius: 50px;
   width: 200px;
   height: 60px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .show-form-modal-content .btn-close{
