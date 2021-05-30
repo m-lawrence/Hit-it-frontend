@@ -56,15 +56,15 @@ function CallFormModal ({ setModalClicked, loggedInUser, addNewCall }){
                 <div className="call-form-modal-body">
                     <div className="input-group">
                         <form onSubmit={handleCallSubmit}>
-                            <label>Location: </label>
-                            <input className="locationInput" type="text" name="location" value={callFormData.location} onChange={handleCallFormChange}></input><br></br><br></br>
-                            <label>Date: </label>
-                            <input type="date" name="date" value={callFormData.date} onChange={handleCallFormChange}></input><br></br><br></br>
-                            <label>Time: </label>
+                        <label className="timeLabel">Time: </label>
                             <input type="time" name="time" value={callFormData.time} onChange={handleCallFormChange}></input><br></br><br></br>
-                            <label>Venue: </label>
+                            <label className="dateLabel">Date: </label>
+                            <input type="date" name="date" value={callFormData.date} onChange={handleCallFormChange}></input><br></br><br></br>
+                            <label className="locationLabel">Location: </label>
+                            <input type="text" name="location" value={callFormData.location} onChange={handleCallFormChange}></input><br></br><br></br>
+                            <label className="venueLabel">Venue: </label>
                             <input type="text" name="venue_name" value={callFormData.venue_name} onChange={handleCallFormChange}></input><br></br><br></br>
-                            <label>More Info: </label>
+                            <label className="moreInfoLabel">More Info: </label>
                             <input type="text" name="details" value={callFormData.details} onChange={handleCallFormChange}></input><br></br><br></br>
                             <button type="submit" className="bottom-btn">Make the call!</button>
                         </form>

@@ -445,8 +445,8 @@ code {
   bottom: 0;
   background-color: rgba(0,0,0, 0.5);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; 
+  justify-content: center; 
 }
 
 .call-form-modal-content{
@@ -454,14 +454,16 @@ code {
   height: 400px;
   background-color: #52b4b9;
   /* color: #353535; */
-  color: #white;
+  color: white;
   text-align: center;
   border-radius: 20px;
+  
 }
 
 
 .call-form-modal-header {
   padding: 10px;
+  text-align: center;
 }
 
 .call-form-modal-title{
@@ -471,12 +473,12 @@ code {
 .call-form-modal-body{
   padding: 10px;
   border-top: 1px solid #eee;
-  /* border-bottom: 1px solid #eee; */
   height: 250px;
 }
 
 .call-form-modal-body .input-group{
   padding: 10px;
+  
 }
 
 .call-form-modal-body input {
@@ -484,8 +486,24 @@ code {
   border-radius: 20px;
 }
 
-.call-form-modal-body .locationInput {
- 
+.call-form-modal-body .locationLabel {
+ padding-right: 8px;
+ padding-left: 20px;
+}
+.call-form-modal-body .dateLabel {
+ padding-right: 32px;
+ padding-left: 20px;
+}
+.call-form-modal-body .timeLabel {
+ padding-right: 30px;
+ padding-left: 20px;
+}
+.call-form-modal-body .venueLabel {
+ padding-right: 20px;
+ padding-left: 20px;
+}
+.call-form-modal-body .moreInfoLabel {
+  padding-left: 20px;
 }
 
 .call-form-modal-body .bottom-btn{
@@ -495,7 +513,8 @@ code {
   border-radius: 50px;
   width: 200px;
   height: 60px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
+  margin: 40px auto 20px auto;
 }
 
 .call-form-modal-content .btn-close{
@@ -547,14 +566,13 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .tour-form-modal-content{
   width: 500px;
   height: 400px;
   background-color: #52b4b9;
-  color: #white;
+  color: white;
   text-align: center;
   border-radius: 20px;
 }
@@ -562,6 +580,7 @@ code {
 
 .tour-form-modal-header {
   padding: 10px;
+  padding-bottom: 20px;
 }
 
 .tour-form-modal-title{
@@ -569,20 +588,27 @@ code {
 }
 
 .tour-form-modal-body{
-  padding: 10px;
+  padding: 20px;
   border-top: 1px solid #eee;
-  /* border-bottom: 1px solid #eee; */
   height: 250px;
 }
 
 .tour-form-modal-body .input-group{
-  padding: 10px;
+  padding: 50px 10px 10px 10px;
 }
 
 .tour-form-modal-body input {
   background-color: #D9D9D9;
   border-radius: 20px;
 }
+
+.tourNameLabel {
+  padding-right: 40px;
+}
+
+.tourImgLabel {
+  padding-right: 5px;
+} 
 
 .tour-form-modal-body .bottom-btn{
   background-color: #284B63;
