@@ -48,18 +48,19 @@ function Venues({ venues, search, setSearch, setSearchText, searchText,setSelect
     
     return (
       <div className="venueMainContainer">
-        <h1>Search Venues</h1>
+        {/* <h1>Find a Venue</h1> */}
         <VenueMap key={mapCoordinates[0] + mapCoordinates[1]} venuesToMap={removedTbd} searchText={searchText} mapCoordinates={mapCoordinates} viewport={viewport} setViewport={setViewport}/>
         <div className="venuesSearchContainer">
             <form className="searchbar" onSubmit={handleSearchSubmit}>
                 <input
+                    className="venueSearchInput"
                     type="text"
                     id="search"
                     placeholder="Location"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                 />
-                <button type="submit">Search</button>
+                <button className="venueSearchBtn" type="submit">Search</button>
             </form>
             <VenueCatFilter setSelectedVenueCategory={setSelectedVenueCategory} />
         </div>

@@ -11,9 +11,8 @@ function CallsSearch({ callSearch, setCallSearch, setCallSearchText}) {
     return (
       <div className="callsSearchDiv">
           <form onSubmit={handleCallSearch}>
-            {/* <label>Search</label> */}
-            <input type="text" placeholder="Location" value={callSearch} onChange={(e) => setCallSearch(e.target.value)}></input>
-            <input type="submit"></input>
+            <input className="callSearchInput" type="text" placeholder="Location" value={callSearch} onChange={(e) => setCallSearch(e.target.value)}></input>
+            <input className="callSearchBtn" type="submit"></input>
           </form>
       </div>
     );

@@ -14,7 +14,7 @@ function VenueMap({ venuesToMap, searchText, mapCoordinates, viewport, setViewpo
 
 
     return (
-      <div>
+      <div className="venueMapDiv"> 
         <ReactMapGL 
         {...viewport}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
