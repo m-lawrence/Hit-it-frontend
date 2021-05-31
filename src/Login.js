@@ -16,7 +16,7 @@ function Login({ setLoggedInUser, bands, setTours }) {
       
         setLoggedInUser(theUser)
         setTours(theUser[0].tours)
-        history.push('./profile')
+        history.push(`./profile/${theUser[0].id}`)
     }
 
     return (

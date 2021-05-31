@@ -68,7 +68,7 @@ function App() {
       {!loggedInUser ? <Login setLoggedInUser={setLoggedInUser} bands={bands} setTours={setTours}/> : null}
       <Switch>
         <div className='mainContainer'>
-          <Route exact path='/profile'>
+          <Route exact path='/profile/:id'>
           {loggedInUser && <Profile loggedInUser={loggedInUser} addNewTour={addNewTour} tours={tours}/>}
           </Route>
           <Route exact path='/tours/:id'>

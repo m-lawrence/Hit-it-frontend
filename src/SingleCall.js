@@ -13,19 +13,18 @@ function SingleCall({ call, loggedInUser, bands }) {
         return band.id === call.band_user_id
     })
 
-
     return (
       <div className="callCard" onClick={handleCallCardClick}>
-        <p>{call.location}</p>
+        <p>{call.location}</p><br></br><br></br>
         <p>{moment(call.date).format("MM-DD-YY")}</p>
-        <p>{moment(call.time).format("LT")}</p>
-        <p>At: {call.venue_name}</p>
-        <p>Details: {call.details}</p>
+        <p>{moment(call.time).format("LT")}</p><br></br><br></br>
+        <p>At: {call.venue_name}</p><br></br><br></br>
+        <p>Details: {call.details}</p><br></br><br></br>
         {callClicked && 
             <div>
-                <p>Call from: {callBand[0].name}</p>
+                <p>Call from: {callBand[0].name}</p><br></br>
                 <p>Email: {callBand[0].email}</p>
-                <Link to='/profile'>Band Page</Link>
+                {/* <Link to={`/profile/${callBand[0].id}`}>Band Page</Link> */}
             </div>}
       </div>
     );
