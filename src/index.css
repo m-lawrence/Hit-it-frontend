@@ -570,6 +570,10 @@ code {
  padding-right: 30px;
  padding-left: 20px;
 }
+
+.call-form-modal-body .timeInput {
+  width: 150px;
+}
 .call-form-modal-body .venueLabel {
  padding-right: 20px;
  padding-left: 20px;
@@ -756,7 +760,11 @@ code {
   padding-right: 25px;
 }
 .showFormTimeLabel {
-  padding-right: 100px;
+  padding-right: 50px;
+}
+
+.showFormTimeInput {
+  width: 150px;
 }
 .showFormVenueLabel {
   padding-right: 40px;
@@ -779,6 +787,93 @@ code {
 }
 
 .show-form-modal-content .btn-close{
+  margin-top: 10px;
+  margin-left: 90%;
+}
+
+/* show edit form modal */
+
+.edit-show-form-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0, 0.5);
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.edit-show-form-modal-content{
+  width: 500px;
+  height: 400px;
+  background-color: #52b4b9;
+  /* color: #353535; */
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  
+}
+
+
+.edit-show-form-modal-header {
+  padding: 10px;
+  text-align: center;
+}
+
+.edit-show-form-modal-title{
+  margin: 0;
+}
+
+.edit-show-form-modal-body{
+  padding: 10px;
+  border-top: 1px solid #eee;
+  height: 250px;
+}
+
+.edit-show-form-modal-body .input-group{
+  padding: 10px;
+  
+}
+
+.edit-show-form-modal-body input {
+  background-color: #D9D9D9;
+  border-radius: 20px;
+}
+
+.edit-show-form-modal-body .locationLabel {
+ padding-right: 30px;
+}
+.edit-show-form-modal-body .dateLabel {
+ padding-right: 60px;
+}
+.edit-show-form-modal-body .timeLabel {
+ padding-right: 60px;
+}
+
+.edit-show-form-modal-body .timeInput {
+  width: 150px;
+}
+.edit-show-form-modal-body .venueLabel {
+ padding-right: 50px;
+}
+.edit-show-form-modal-body .moreInfoLabel {
+  padding-right: 45px;
+}
+
+.edit-show-form-modal-body .bottom-btn{
+  background-color: #284B63;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 200px;
+  height: 60px;
+  /* margin-top: 40px; */
+  margin: 20px auto 20px auto;
+}
+
+.edit-show-form-modal-content .btn-close{
   margin-top: 10px;
   margin-left: 90%;
 }

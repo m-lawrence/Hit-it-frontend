@@ -56,10 +56,12 @@ function CallFormModal ({ setModalClicked, loggedInUser, addNewCall }){
                 <div className="call-form-modal-body">
                     <div className="input-group">
                         <form onSubmit={handleCallSubmit}>
-                        <label className="timeLabel">Time: </label>
-                            <input type="time" name="time" value={callFormData.time} onChange={handleCallFormChange}></input><br></br><br></br>
+                        {/* <label className="timeLabel">Time: </label>
+                            <input className="timeInput" type="time" name="time" value={callFormData.time} onChange={handleCallFormChange}></input><br></br><br></br> */}
                             <label className="dateLabel">Date: </label>
                             <input type="date" name="date" value={callFormData.date} onChange={handleCallFormChange}></input><br></br><br></br>
+                            <label className="timeLabel">Time: </label>
+                            <input className="timeInput" type="time" name="time" value={callFormData.time} onChange={handleCallFormChange}></input><br></br><br></br>
                             <label className="locationLabel">Location: </label>
                             <input type="text" name="location" value={callFormData.location} onChange={handleCallFormChange}></input><br></br><br></br>
                             <label className="venueLabel">Venue: </label>

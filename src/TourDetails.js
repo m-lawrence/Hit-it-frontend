@@ -124,14 +124,12 @@ function TourDetails({ venues }) {
                 <div className="show-form-modal-body">
                   <div className="input-group">
                     <form onSubmit={handleNewShowSubmit}>
-                    <label className="showFormTimeLabel">Time: </label>
-                      <input type="time" value={formData.time} name="time" onChange={handleChange}></input><br></br><br></br>
                       <label className="showFormDateLabel">Date: </label>
                       <input type="date" value={formData.date} name="date" onChange={handleChange}></input><br></br><br></br>
+                      <label className="showFormTimeLabel">Time: </label>
+                      <input className="showFormTimeInput" type="time" value={formData.time} name="time" onChange={handleChange}></input><br></br><br></br>
                       <label className="showFormLocationLabel">Location: </label>
                       <input type="text" value={formData.location} name="location" onChange={handleChange}></input><br></br><br></br>
-                      {/* <label className="showFormTimeLabel">Time: </label>
-                      <input type="time" value={formData.time} name="time" onChange={handleChange}></input><br></br><br></br> */}
                       <label className="showFormVenueLabel">Venue: </label>
                       <input type="text" value={newVenue} name="venue" onChange={handleVenueChange}></input><br></br><br></br>
                       <label className="showFormBandsLabel">Other bands: </label>
