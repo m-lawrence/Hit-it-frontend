@@ -396,16 +396,17 @@ code {
   border: 1px solid black;
   border-radius: 20px;
   width: 80%;
-  height: 100px;
+  height: 200px;
   background-color: white;
   color: #353535;
   font-family: 'Montserrat', sans-serif;
+  overflow: scroll;
 } 
 
 .venueCard img {
   float: left;
-  width: 150px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 } 
@@ -413,6 +414,18 @@ code {
 
 .venueCard h4 {
   text-align: center;
+}
+
+.venueCard .moreLessBtn {
+  margin-left: 20px;
+}
+
+.venueCardName {
+  font-weight: bolder;
+}
+
+.venueCardLocation {
+  font-weight: bolder;
 }
 
 .venueMainContainer {
@@ -427,6 +440,10 @@ code {
 
 .venueCard p {
   display: inline;
+}
+
+.venueCard p span {
+  font-weight: bolder;
 }
 
 .venueCard:hover {
@@ -472,17 +489,14 @@ code {
   border-radius: 50px;
   width: 100px;
   height: 30px;
-  /* margin: 40px auto 20px auto; */
 }
 
 .callCard {
   margin-top: 50px;
   border: 1px solid black;
   border-radius: 20px;
-  /* width: 800px; */
   width: 80%;
   height: 100px;
-  /* background: linear-gradient(135deg, rgb(247, 245, 245), grey);  */
   background-color: white;
   color: #353535;
   font-family: 'Montserrat', sans-serif;
@@ -525,7 +539,6 @@ code {
   width: 500px;
   height: 400px;
   background-color: #52b4b9;
-  /* color: #353535; */
   color: white;
   text-align: center;
   border-radius: 20px;
@@ -589,7 +602,6 @@ code {
   border-radius: 50px;
   width: 200px;
   height: 60px;
-  /* margin-top: 40px; */
   margin: 40px auto 20px auto;
 }
 
@@ -723,7 +735,7 @@ code {
   width: 500px;
   height: 400px;
   background-color: #52b4b9;
-  color: #white;
+  color: white;
   text-align: center;
   border-radius: 20px;
 }

@@ -9,15 +9,15 @@ function SingleVenue({ venue }) {
 
     return (
       <div className="venueCard">
-        <p>{venue.name}</p>
+        <p className="venueCardName">{venue.name} | </p>
         <img src={venue.image} alt={venue.name} />
-        <p>{venue.location}</p>
-        <button onClick={handleVenueClick}>{venueClicked ? 'Less' : 'More'}</button>
+        <p className="venueCardLocation">{venue.location}</p>
+        <button className="moreLessBtn" onClick={handleVenueClick}>{venueClicked ? '-' : '+'}</button>
         {venueClicked &&
             <div>
-                <p>{venue.description}</p>
-                <p>Website: {venue.website}</p>
-                <p>Booking: {venue.booking}</p>
+                <p>{venue.description}</p><br></br>
+                <p><span>Website: </span>{venue.website}</p><br></br>
+                <p><span>Booking: </span>{venue.booking}</p>
             </div>}
       </div>
     );
