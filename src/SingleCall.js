@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import moment from 'moment'
+import { Link } from "react-router-dom";
 
-function SingleCall({ call, loggedInUser }) {
+function SingleCall({ call, loggedInUser, bands }) {
     const [callClicked, setCallClicked] = useState(false)
     
     function handleCallCardClick() {
         setCallClicked(callClicked => !callClicked)
     }
+   
+    const callBand = bands.filter(band => {
+        return band.id === call.band_user_id
+    })
+
 
     return (
       <div className="callCard" onClick={handleCallCardClick}>
@@ -17,8 +23,9 @@ function SingleCall({ call, loggedInUser }) {
         <p>Details: {call.details}</p>
         {callClicked && 
             <div>
-                <p>Call from: {loggedInUser[0].name}</p>
-                {/* add link to band's page? */}
+                <p>Call from: {callBand[0].name}</p>
+                <p>Email: {callBand[0].email}</p>
+                <Link to='/profile'>Band Page</Link>
             </div>}
       </div>
     );

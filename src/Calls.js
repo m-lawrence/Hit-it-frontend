@@ -4,7 +4,7 @@ import addIcon from './add_icon.png';
 import CallFormModal from './CallFormModal';
 import CallsSearch from './CallsSearch';
 
-function Calls({ calls, loggedInUser, addNewCall }) {
+function Calls({ calls, loggedInUser, addNewCall, bands }) {
     const [modalClicked, setModalClicked] = useState(false)
     const [callSearch, setCallSearch] = useState("")
     const [callSearchText, setCallSearchText] = useState(loggedInUser[0].location)
@@ -16,7 +16,7 @@ function Calls({ calls, loggedInUser, addNewCall }) {
     })
 
     const callsArr = callsByUserLocation.map(call => {
-        return <SingleCall key={call.id} call={call} loggedInUser={loggedInUser}/>
+        return <SingleCall key={call.id} call={call} loggedInUser={loggedInUser} bands={bands}/>
     })
 
     const callsByDate = callsArr.sort((a,b) => Date.parse(a.props.call.date) - Date.parse(b.props.call.date))
