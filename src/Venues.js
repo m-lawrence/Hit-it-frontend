@@ -38,6 +38,21 @@ function Venues({ venues, search, setSearch, setSearchText, searchText,setSelect
         } else if (search.toLowerCase() === 'athens') {
             const coords = [33.95422253438973, -83.36474904377586]
             return setMapCoordinates(coords)
+        } else if (search.toLowerCase() === 'richmond') {
+            const coords = [37.53900801643146, -77.46168448242011]
+            return setMapCoordinates(coords)
+        } else if (search.toLowerCase() === 'washington, dc') {
+            const coords = [38.914352334431335, -77.01870515807114]
+            return setMapCoordinates(coords)
+        } else if (search.toLowerCase() === 'brooklyn') {
+            const coords = [40.67693268145404, -73.94637991252196]
+            return setMapCoordinates(coords)
+        } else if (search.toLowerCase() === 'nashville') {
+            const coords = [36.18853084652303, -86.79627014475429]
+            return setMapCoordinates(coords)
+        } else if (search.toLowerCase() === 'philidelphia') {
+            const coords = [40.00083572605776, -75.1235306148978]
+            return setMapCoordinates(coords)
         }
     }
    
