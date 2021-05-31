@@ -45,7 +45,7 @@ function TourFormModal ({ setNewTourClicked, currentUser, addNewTour }){
                          <input className="tourNameInput" type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}></input><br></br><br></br><br></br>
                          <label className="tourImgLabel">Image URL: </label>
                          <input className="tourImgInput" type="text" name="image" value={image} onChange={(e) => setImage(e.target.value)}></input><br></br><br></br><br></br>
-                         <button type="submit" className="bottom-btn">Creat tour</button>
+                         <button type="submit" className="bottom-btn">Create tour</button>
                      </form>
                     </div>
                         

@@ -54,8 +54,6 @@ function SingleShow({ show, venue, removeShow, updateShow, venues }) {
             .then(updateShow)
     
             setShowEditClicked(false)
-        //    const readyShow = {...updatedShow, id: show.id}
-        //    updateShow(readyShow)
     }
 
     function handleEditShowChange(e) {
@@ -82,14 +80,14 @@ function SingleShow({ show, venue, removeShow, updateShow, venues }) {
         <p>{show.location}</p>
         <p>{moment(show.time).format("LT")}</p>
         <p>{venue[0].name}</p>
-        <button onClick={handleShowClick}>{showClicked ? '➖' : '➕'}</button>
+        <button className="moreLessBtn" onClick={handleShowClick}>{showClicked ? '-' : '+'}</button>
         {showClicked &&
          <div>
-           <p>With: {show.other_bands}</p>
-           <p>Details: {show.details}</p>
-           <button onClick={handleShowEditClick}>Edit</button>
-           <button onClick={handleShowDeleteClick}>Delete</button>
-         </div>}
+           <p><span>With: </span>{show.other_bands}</p>
+           <p><span>Details: </span>{show.details}</p>
+           <button className="showCardBtn" onClick={handleShowEditClick}>Edit</button>
+           <button className="showCardBtn" onClick={handleShowDeleteClick}>Delete</button>
+         </div>}<br></br>
          {showEditClicked && showClicked &&
          <div>
            <form onSubmit={handleEditShowSubmit}>

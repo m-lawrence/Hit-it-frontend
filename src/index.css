@@ -166,6 +166,8 @@ code {
 .bandProfileHeader {
   text-align: center;
   padding: 50px;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Roboto', sans-serif;  
 }
 
 .bandInfoDiv {
@@ -201,6 +203,8 @@ code {
 .toursHeaderDiv {
   text-align: center;
   padding-top: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .tourListDiv {
@@ -211,6 +215,8 @@ code {
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .tourCard {
@@ -258,6 +264,8 @@ code {
 .tourDeetsContainer h1 {
   text-align: center;
   padding: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .showCard {
@@ -265,17 +273,42 @@ code {
   border: 1px solid black;
   border-radius: 20px;
   width: 80%;
-  height: 100px;
+  height: 150px;
   /* background: linear-gradient(135deg, rgb(247, 245, 245), grey);  */
   /* font-size: 2.5em; */
   background-color: white;
   color: #353535;
   font-family: 'Montserrat', sans-serif;
+  overflow-y: scroll;
 }
 
 .showCard p {
   display: inline;
   padding: 20px;
+  font-weight: bold;
+}
+
+.showCard p span {
+  color: black;
+}
+
+.moreLessBtn {
+  background-color: #52b4b9;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.5em;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+} 
+
+.showCardBtn {
+  background-color: #52b4b9;
+  border-radius: 20px;
+  color: white;
+  border: 2px solid white;
+  padding: 10px;
+  width: 60px;
 }
 
 .showCard:hover {
