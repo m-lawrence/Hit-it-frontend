@@ -13,9 +13,9 @@ function Profile({ loggedInUser, addNewTour, tours }) {
             </div>
             <div className='bandInfo'>
                 <p><span className="profSpan">Email: </span>{currentUser.email}</p>
-                {currentUser.website && <p><span className="profSpan">Website: </span>{currentUser.website}</p>}
-                {currentUser.facebook && <p><span className="profSpan">Facebook: </span>{currentUser.facebook}</p>}
-                {currentUser.music_link && <p><span className="profSpan">Music: </span>{currentUser.music_link}</p>}
+                {currentUser.website && <p><span className="profSpan">Website: </span><a href={currentUser.website} target="_blank">{currentUser.website}</a></p>}
+                {currentUser.facebook && <p><span className="profSpan">Facebook: </span><a href={currentUser.facebook} target="_blank">{currentUser.facebook}</a></p>}
+                {currentUser.music_link && <p><span className="profSpan">Music: </span><a href={currentUser.music_link} target="_blank">{currentUser.music_link}</a></p>}
                 {currentUser.genre && <p><span className="profSpan">Genre: </span>{currentUser.genre}</p>}
                {currentUser.location && <p><span className="profSpan">Location: </span>{currentUser.location}</p>}
                 {currentUser.band_members && <p><span className="profSpan">Band members: </span>{currentUser.band_members}</p>}

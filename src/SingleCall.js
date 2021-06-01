@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import moment from 'moment'
-import { Link } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 function SingleCall({ call, loggedInUser, bands }) {
     const [callClicked, setCallClicked] = useState(false)
+    const history = useHistory()
     
     function handleCallCardClick() {
         setCallClicked(callClicked => !callClicked)
@@ -12,6 +13,11 @@ function SingleCall({ call, loggedInUser, bands }) {
     const callBand = bands.filter(band => {
         return band.id === call.band_user_id
     })
+    const band = callBand[0]
+
+    function handleCallBandClick() {
+        history.push(`bands/${band.id}`, {params: band})
+    }
 
     return (
       <div className="callCard" onClick={handleCallCardClick}>
@@ -24,7 +30,7 @@ function SingleCall({ call, loggedInUser, bands }) {
             <div>
                 <p>Call from: {callBand[0].name}</p><br></br>
                 <p>Email: {callBand[0].email}</p>
-                {/* <Link to={`/profile/${callBand[0].id}`}>Band Page</Link> */}
+                <button className="bandLinkButton" onClick={handleCallBandClick}>Band page</button>
             </div>}
       </div>
     );

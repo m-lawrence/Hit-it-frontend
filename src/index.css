@@ -201,6 +201,14 @@ code {
   /* max-width: 40%; */
 }
 
+.bandInfo a {
+  color: white;
+}
+
+.bandInfo a:hover {
+  color: #52b4b9;
+}
+
 .toursHeaderDiv {
   text-align: center;
   padding-top: 100px;
@@ -404,6 +412,14 @@ code {
   overflow: scroll;
 } 
 
+.venueCard a {
+  color: #353535;
+}
+
+.venueCard a:hover {
+  color: #52b4b9;
+}
+
 .venueCard img {
   float: left;
   width: 200px;
@@ -498,7 +514,7 @@ code {
   border: 1px solid black;
   border-radius: 20px;
   width: 30%;
-  height: 250px;
+  height: 300px;
   background-color: white;
   color: #353535;
   font-family: 'Montserrat', sans-serif;

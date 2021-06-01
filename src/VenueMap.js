@@ -2,14 +2,7 @@ import React, { useState } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import horns from './horn_hands_crop.png'
 
-function VenueMap({ venuesToMap, searchText, mapCoordinates, viewport, setViewport }) {
-    // const [viewport, setViewport] = useState({
-    //     latitude: mapCoordinates[0],
-    //     longitude: mapCoordinates[1],
-    //     zoom: 10,
-    //     width: '30vw',
-    //     height: '20vw'
-    // })
+function VenueMap({ venuesToMap, viewport, setViewport }) {
     const [selectedVenue, setSelectedVenue] = useState(null)
 
 

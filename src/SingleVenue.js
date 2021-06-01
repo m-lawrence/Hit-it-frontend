@@ -16,7 +16,7 @@ function SingleVenue({ venue }) {
         {venueClicked &&
             <div>
                 <p>{venue.description}</p><br></br>
-                <p><span>Website: </span>{venue.website}</p><br></br>
+                <p><span>Website: </span><a href={venue.website} target="_blank">{venue.website}</a></p><br></br>
                 <p><span>Booking: </span>{venue.booking}</p>
             </div>}
       </div>
