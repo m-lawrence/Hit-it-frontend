@@ -14,7 +14,7 @@ function NavBar({ setLoggedInUser }) {
               <img className="logoImg" src={HILogo}/>
           </div>
           <ul>
-            <li><NavLink to="/profile/:id" exact>My Page</NavLink></li>
+            <li><NavLink to="/profile" exact>My Page</NavLink></li>
             <li><NavLink to="/venues" exact>Find a venue</NavLink></li>
             <li><NavLink to="/calls" exact>Calls</NavLink></li>
             <li><NavLink to="/" exact onClick={handleLogout}>Logout</NavLink></li>

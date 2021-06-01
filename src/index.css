@@ -255,8 +255,8 @@ code {
 }
 
 .tourDeetsContainer img {
- max-height: 900px;
- max-width: 900px;
+ max-height: 700px;
+ max-width: 700px;
  border: 3px solid white;
  border-radius: 20px;
 }
