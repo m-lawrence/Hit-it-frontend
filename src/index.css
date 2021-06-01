@@ -960,3 +960,15 @@ code {
   color: grey;
   text-transform: capitalize;
 }
+
+/* band show page */
+
+.bandShowContainer {
+
+}
+
+.bandProfileMainContainer {
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-bottom: 200px;
+} 
