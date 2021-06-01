@@ -13,13 +13,13 @@ function Profile({ loggedInUser, addNewTour, tours }) {
             </div>
             <div className='bandInfo'>
                 <p><span className="profSpan">Email: </span>{currentUser.email}</p>
-                <p><span className="profSpan">Website: </span>{currentUser.website}</p>
-                <p><span className="profSpan">Facebook: </span>{currentUser.facebook}</p>
-                <p><span className="profSpan">Music: </span>{currentUser.music_link}</p>
-                <p><span className="profSpan">Genre: </span>{currentUser.genre}</p>
-                <p><span className="profSpan">Location: </span>{currentUser.location}</p>
-                <p><span className="profSpan">Band members: </span>{currentUser.band_members}</p>
-                <p><span className="profSpan">Bio: </span>{currentUser.bio}</p>
+                {currentUser.website && <p><span className="profSpan">Website: </span>{currentUser.website}</p>}
+                {currentUser.facebook && <p><span className="profSpan">Facebook: </span>{currentUser.facebook}</p>}
+                {currentUser.music_link && <p><span className="profSpan">Music: </span>{currentUser.music_link}</p>}
+                {currentUser.genre && <p><span className="profSpan">Genre: </span>{currentUser.genre}</p>}
+               {currentUser.location && <p><span className="profSpan">Location: </span>{currentUser.location}</p>}
+                {currentUser.band_members && <p><span className="profSpan">Band members: </span>{currentUser.band_members}</p>}
+                {currentUser.bio && <p><span className="profSpan">Bio: </span>{currentUser.bio}</p>}
             </div>
         </div>
         <div className='toursHeaderDiv'>

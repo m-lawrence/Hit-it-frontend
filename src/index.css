@@ -198,6 +198,7 @@ code {
   padding: 20px;
   border-radius: 20px;
   font-family: 'Montserrat', sans-serif;
+  /* max-width: 40%; */
 }
 
 .toursHeaderDiv {
@@ -636,10 +637,16 @@ code {
 
 .mapPopup {
   color: black;
+  max-height: 150px;
+  max-width: 150px;
+  text-align: center;
+  /* display: flex;
+  justify-content: space-evenly; */
 }
 
 .mapPopup h1 {
   font-size: .75em;
+  padding: 0;
 }
 
 .mapPopup img {
@@ -913,7 +920,7 @@ code {
   border: 1px solid black;
   border-radius: 20px;
   width: 30%;
-  height: 250px;
+  height: 275px;
   background-color: white;
   color: #353535;
   font-family: 'Montserrat', sans-serif;
@@ -936,8 +943,9 @@ code {
 }
 
 .bandsMainContainer .searchbar {
-  padding-right: 20px;
-  padding-left: 170px;
+  /* padding-right: 20px;
+  padding-left: 170px; */
+  margin: 20px auto;
 } 
 
 .bandSearchInput {
@@ -959,6 +967,20 @@ code {
 .bandsMainContainer .searchbar input::placeholder {
   color: grey;
   text-transform: capitalize;
+}
+
+.bandLinkButton {
+  background-color: #52b4b9;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 100px;
+  height: 30px;
+  margin: 10px auto 20px auto;
+}
+
+.bandLinkButton:hover {
+  opacity: 75%;
 }
 
 /* band show page */

@@ -13,8 +13,8 @@ function SingleBand({ band }) {
             <p>{band.name}</p>
             <p>{band.location}</p>
             <p>{band.genre}</p>
-            <img src={band.image} alt={band.name} />
-            <button onClick={handleBandClick}>{band.name}</button>
+            <img src={band.image} alt={band.name} /><br></br>
+            <button className="bandLinkButton" onClick={handleBandClick}>Band page</button>
       </div>
     );
   }
