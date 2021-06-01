@@ -892,3 +892,71 @@ code {
   margin-top: 10px;
   margin-left: 90%;
 }
+
+/* Bands page */
+.bandsMainContainer {
+  padding-bottom: 600px;
+}
+
+.bandListDiv {
+  width: 80%;
+  text-align: center; 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px auto;
+}
+
+.bandCard {
+  margin-top: 50px;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 30%;
+  height: 250px;
+  background-color: white;
+  color: #353535;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  padding: 20px;
+}
+
+.bandCard img {
+  max-width: 125px;
+  max-height: 125px;
+  border-radius: 20px;
+}
+
+.bandsSearchContainer {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-flow: column;
+  justify-content: space-evenly;
+  padding: 40px;
+}
+
+.bandsMainContainer .searchbar {
+  padding-right: 20px;
+  padding-left: 170px;
+} 
+
+.bandSearchInput {
+  border-radius: 20px;
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bandSearchBtn {
+  background-color: #52b4b9;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 100px;
+  height: 30px;
+  margin: 40px auto 20px auto;
+}
+
+.bandsMainContainer .searchbar input::placeholder {
+  color: grey;
+  text-transform: capitalize;
+}

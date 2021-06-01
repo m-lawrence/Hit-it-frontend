@@ -6,6 +6,7 @@ import Profile from './Profile'
 import Venues from './Venues'
 import TourDetails from './TourDetails'
 import Calls from './Calls';
+import Bands from './Bands';
 
 
 function App() {
@@ -60,7 +61,6 @@ function App() {
     setCalls([...calls, callObj])
   }
 
-  
 
   return (
     <div className="bigContainer">
@@ -76,6 +76,9 @@ function App() {
           </Route>
           <Route exact path='/venues'>
           {loggedInUser && <Venues setSearchText={setSearchText} searchText={searchText} venues={filteredByCatVenues} setSearch={setSearch} search={search} setSelectedVenueCategory={setSelectedVenueCategory} setMapCoordinates={setMapCoordinates} mapCoordinates={mapCoordinates} />}
+          </Route>
+          <Route exact path='/bands'>
+          {loggedInUser && <Bands bands={bands}/>}
           </Route>
           <Route exact path='/calls'>
           {loggedInUser && <Calls calls={calls} loggedInUser={loggedInUser} addNewCall={addNewCall} bands={bands}/>}

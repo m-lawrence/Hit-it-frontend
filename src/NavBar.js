@@ -15,7 +15,8 @@ function NavBar({ setLoggedInUser }) {
           </div>
           <ul>
             <li><NavLink to="/profile" exact>My Page</NavLink></li>
-            <li><NavLink to="/venues" exact>Find a venue</NavLink></li>
+            <li><NavLink to="/venues" exact>Venues</NavLink></li>
+            <li><NavLink to="/bands" exact>Bands</NavLink></li>
             <li><NavLink to="/calls" exact>Calls</NavLink></li>
             <li><NavLink to="/" exact onClick={handleLogout}>Logout</NavLink></li>
           </ul>
