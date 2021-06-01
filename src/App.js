@@ -7,6 +7,7 @@ import Venues from './Venues'
 import TourDetails from './TourDetails'
 import Calls from './Calls';
 import Bands from './Bands';
+import BandDetails from './BandDetails';
 
 
 function App() {
@@ -79,6 +80,9 @@ function App() {
           </Route>
           <Route exact path='/bands'>
           {loggedInUser && <Bands bands={bands}/>}
+          </Route>
+          <Route path='/bands/:id'>
+          {loggedInUser && <BandDetails />}
           </Route>
           <Route exact path='/calls'>
           {loggedInUser && <Calls calls={calls} loggedInUser={loggedInUser} addNewCall={addNewCall} bands={bands}/>}

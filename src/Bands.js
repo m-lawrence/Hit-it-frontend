@@ -6,7 +6,7 @@ function Bands({ bands }) {
     const [bandSearchText, setBandSearchText] = useState("asheville")
     
     const bandsArr = bands.map(band => {
-        return <SingleBand key={band.id} band={band} />
+        return <SingleBand key={band.id} band={band}/>
     })
 
     const bandsByLocation = bandsArr.filter(band => {
