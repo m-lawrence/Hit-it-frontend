@@ -111,8 +111,8 @@ function TourDetails({ venues }) {
         </div>
         <div className='tourDeetsShowsDiv'>
           {showsArr}
-          <div className="showCard" onClick={handleAddShowClick}>
-              <h4>+ Add a show!</h4>
+          <div className="showCardNew" onClick={handleAddShowClick}>
+              <br></br><h4>+ Add a show!</h4>
           </div>
           {addShowClicked && 
           <div className="show-form-modal">

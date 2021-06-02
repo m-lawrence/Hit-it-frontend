@@ -200,6 +200,7 @@ code {
   padding: 20px;
   border-radius: 20px;
   font-family: 'Montserrat', sans-serif;
+  margin-left: 20px;
 }
 
 .bandInfo a {
@@ -308,6 +309,22 @@ code {
   font-family: 'Montserrat', sans-serif;
   overflow-y: scroll;
 }
+
+.showCardNew {
+  margin-top: 50px;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 80%;
+  height: 150px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #52b4b9;
+  color: white;
+  font-size: 1.25em;
+}
+
+.showCardNew:hover {
+  opacity: 80%;
+ }
 
 .showCard p {
   display: inline;
@@ -475,6 +492,7 @@ code {
 
 .venueCard p {
   display: inline;
+  line-height: 1.3em;
 }
 
 .venueCard p span {
@@ -516,6 +534,8 @@ code {
   border-radius: 20px;
   padding: 5px;
   font-family: 'Montserrat', sans-serif;
+  width: 300px;
+  height: 20px;
 }
 
 .callSearchBtn {
@@ -524,7 +544,8 @@ code {
   border: none;
   border-radius: 50px;
   width: 100px;
-  height: 30px;
+  height: 35px;
+  margin-left: 10px;
 }
 
 .callCard {
@@ -553,6 +574,7 @@ code {
   max-height: 100px;
   margin-top: 20px;
   float: right;
+  margin-right: 75px;
 }
 
 .addIcon:hover {
@@ -667,6 +689,11 @@ code {
 .marker-btn img {
   width: 20px;
   height: 20px;
+}
+
+.marker-btn img {
+  height: 23px;
+  width: 23px;
 }
 
 .mapPopup {
@@ -986,6 +1013,8 @@ code {
   border-radius: 20px;
   padding: 5px;
   font-family: 'Montserrat', sans-serif;
+  width: 300px;
+  height: 20px;
 }
 
 .bandSearchBtn {
@@ -994,8 +1023,8 @@ code {
   border: none;
   border-radius: 50px;
   width: 100px;
-  height: 30px;
-  margin: 40px auto 20px auto;
+  height: 35px;
+  margin: 40px 10px 0 10px;
 }
 
 .bandsMainContainer .searchbar input::placeholder {
