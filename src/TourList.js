@@ -16,7 +16,7 @@ function TourList({ currentUser, addNewTour, tours }) {
     return (
       <div className="tourListDiv">
         {toursArr}
-        <div className="tourCard" onClick={handleNewTourClick}>
+        <div className="tourCardNew" onClick={handleNewTourClick}>
             <h4>+ Create new tour!</h4>
         </div>
         {newTourClicked && 

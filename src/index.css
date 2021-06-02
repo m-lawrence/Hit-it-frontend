@@ -24,17 +24,19 @@ code {
 }
 
 .mainContainer {
-  background-color: #353535;
+  /* background-color: #353535; */
   margin-left: 150px;
   margin-right: 150px;
   color: white;
   border-radius: 20px;
   margin-top: 20px;
+  background-color: rgb(53, 53, 53, 0.7);
 }
 
 .profileMainContainer {
   margin-left: 50px;
   margin-right: 50px;
+  padding-bottom: 200px;
 } 
 
 
@@ -198,7 +200,6 @@ code {
   padding: 20px;
   border-radius: 20px;
   font-family: 'Montserrat', sans-serif;
-  /* max-width: 40%; */
 }
 
 .bandInfo a {
@@ -214,6 +215,7 @@ code {
   padding-top: 100px;
   font-family: 'Montserrat', sans-serif;
   font-family: 'Roboto', sans-serif;
+  font-size: 1.25em;
 }
 
 .tourListDiv {
@@ -235,14 +237,30 @@ code {
   width: 80%;
   height: 100px;
   /* background: linear-gradient(135deg, rgb(247, 245, 245), grey);  */
-  font-size: 2.5em;
+  font-size: 1.5em;
   background-color: white;
   color: #353535;
+}
+
+.tourCardNew {
+  margin-top: 50px;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 80%;
+  height: 100px;
+  /* background: linear-gradient(135deg, rgb(247, 245, 245), grey);  */
+  font-size: 1.5em;
+  background-color: #52b4b9;
+  color: white;
 }
 
 .tourCard:hover {
   /* background-color: #52b4b9; */
  background-color: #D9D9D9;
+}
+
+.tourCardNew:hover {
+ opacity: 80%;
 }
 
 .singleTourImg {
