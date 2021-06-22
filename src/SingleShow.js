@@ -5,7 +5,7 @@ function SingleShow({ show, venue, removeShow, updateShow, venues }) {
     const [showClicked, setShowClicked] = useState(false)
     const [showEditClicked, setShowEditClicked] = useState(false)
     const [editedVenue, setEditedVenue] = useState("")
-    const [editedVenueId, setEditedVenueID] = useState(venue)
+    const [editedVenueId, setEditedVenueID] = useState(venue[0].id)
     const [editFormData, setEditFormData] = useState({
         date: show.date,
         location: show.location,
@@ -13,7 +13,6 @@ function SingleShow({ show, venue, removeShow, updateShow, venues }) {
         other_bands: show.other_bands,
         details: show.details
     })
-
 
     function handleShowClick() {
         setShowClicked(showClicked => !showClicked)
@@ -71,7 +70,11 @@ function SingleShow({ show, venue, removeShow, updateShow, venues }) {
         const theVenue = venues.filter(venue => {
             return venue.name.toLowerCase().includes(editedVenue.toLowerCase()) 
           })
+          if (theVenue.length > 0) {
             setEditedVenueID(theVenue[0].id)
+          } else {
+              setEditedVenueID(venues[0].id)
+          }
     }
 
     function handleCloseEditModal() {
@@ -82,7 +85,6 @@ function SingleShow({ show, venue, removeShow, updateShow, venues }) {
       <div className="showCard">
         <p>{moment(show.date).format("MM-DD-YY")}</p>
         <p>{show.location}</p>
-        {/* <p>{moment(show.time).format("LT")}</p> */}
         <p>{moment(show.time).add(5,'hours').format("LT")}</p>
         <p>{venue[0].name}</p>
         <button className="moreLessBtn" onClick={handleShowClick}>{showClicked ? '-' : '+'}</button><br></br><br></br>
