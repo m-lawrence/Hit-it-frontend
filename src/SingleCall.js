@@ -23,7 +23,8 @@ function SingleCall({ call, loggedInUser, bands }) {
       <div className="callCard" onClick={handleCallCardClick}>
         <p>{call.location}</p><br></br><br></br>
         <p>{moment(call.date).format("MM-DD-YY")}</p>
-        <p>{moment(call.time).format("LT")}</p><br></br><br></br>
+        {/* <p>{moment(call.time).format("LT")}</p><br></br><br></br> */}
+        <p>{moment(call.time).add(5,'hours').format("LT")}</p><br></br><br></br>
         <p>At: {call.venue_name}</p><br></br><br></br>
         <p>Details: {call.details}</p><br></br><br></br>
         {callClicked && 
