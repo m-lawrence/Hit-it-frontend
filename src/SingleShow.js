@@ -82,7 +82,8 @@ function SingleShow({ show, venue, removeShow, updateShow, venues }) {
       <div className="showCard">
         <p>{moment(show.date).format("MM-DD-YY")}</p>
         <p>{show.location}</p>
-        <p>{moment(show.time).format("LT")}</p>
+        {/* <p>{moment(show.time).format("LT")}</p> */}
+        <p>{moment(show.time).add(5,'hours').format("LT")}</p>
         <p>{venue[0].name}</p>
         <button className="moreLessBtn" onClick={handleShowClick}>{showClicked ? '-' : '+'}</button><br></br><br></br>
         {showClicked &&
