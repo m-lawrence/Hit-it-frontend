@@ -64,12 +64,13 @@ code {
   left: 50%;
   transform: translate(-50%,-50%);
   width: 50vw;  
-  min-height: 10vh;
+  min-height: 9vh;
   background: transparent;  
   color: #fff;
   padding: 50px 20px;
   box-sizing: border-box;
   transition: .9s;
+  border-radius: 20px;
 }
 .loginContainer .box:hover{
   background: rgba(255,255,255,.2);
