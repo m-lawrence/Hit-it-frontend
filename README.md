@@ -10,66 +10,38 @@ Hit It is an app designed to help independent musicians plan and organize their 
 4. Ensure that you have succesfully started the Rails server
 5. Run 'npm start'
 
-### `yarn start`
+## Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Sign in to the app using any of the seeded users' email and password
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Click on a tour to be directed to the tour show page or click 'create new tour' to fill out the modal form to start a new tour.
 
-### `yarn test`
+Once on a tour show page you may:
+    -click 'add a show' to fill out the modal form to add a new show to the tour
+    -view all tour shows
+    -click the plus sign on a show to view more details and present the options to edit or delete the show
+    -delete a show
+    -edit show information
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Use the navbar to direct to the venues page
+    -type a location into the search bar to pull up venues in that location on the map
+    -click icon on map to show pop up information about the venue
+    -filter venues by type
+    -view list of venues
+    -click plus sign on venue card to show more information about the venue
 
-### `yarn build`
+Use navbar to direct to bands page
+    -use search bar to look for bands in a specific location
+    -view list of bands 
+    -click 'band page' on a card to direct to that band's profile page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Use navbar to direct to calls page
+    -view calls in a specific location
+    -click a card to see more information
+    -click 'band page' on a card to be directed to that band's profile page
+    -use search bar to view calls in a specific location
+    -click plus sign icon in top right corner to fill out modal form to create a new call
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Use navbar to logout
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Hit-it-frontend
