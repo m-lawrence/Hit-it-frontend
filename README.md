@@ -45,3 +45,14 @@ Use navbar to direct to calls page
 Use navbar to logout
 
 
+## Notes
+
+Due to current data limitiations only the following locations are searchable:
+
+venues: Asheville, Atlanta, Athens, Chattanooga, Raleigh, Richmond, Washington DC, Brooklyn, Nashville, Philidelphia 
+
+bands: Asheville, Athens, Philidelphia, Brooklyn, Washington DC, Chattanooga
+
+calls: Asheville, Athens
+    -unless you create a new call in a new location
+
