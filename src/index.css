@@ -569,7 +569,7 @@ code {
 }
 
 .callCard:hover {
-  background-color: #D9D9D9;
+  background-color: rgb(192, 223, 233);
 }
 
 .addIcon {
