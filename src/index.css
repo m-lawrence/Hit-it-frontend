@@ -258,8 +258,12 @@ code {
 }
 
 .tourCard:hover {
-  /* background-color: #52b4b9; */
- background-color: #D9D9D9;
+ background-color: #52b4b9;
+ border: 2px solid white;
+}
+
+.tourCard:hover h4 {
+  color: white;
 }
 
 .tourCardNew:hover {
