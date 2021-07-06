@@ -342,6 +342,10 @@ code {
   color: black;
 }
 
+.showCard:hover p span {
+  color: white;
+}
+
 .moreLessBtn {
   background-color: #52b4b9;
   border-radius: 20px;
@@ -352,6 +356,10 @@ code {
   border: 2px solid white;
 } 
 
+.moreLessBtn:hover {
+  opacity: 80%;
+}
+
 .showCardBtn {
   background-color: #52b4b9;
   border-radius: 20px;
@@ -361,9 +369,22 @@ code {
   width: 60px;
 }
 
+.showCardBtn:hover {
+  opacity: 80%;
+}
+
 .showCard:hover {
-  /* background-color: #52b4b9; */
-  background-color: #D9D9D9;
+  background-color: #52b4b9;
+  border: 2px solid white;
+  color: white;
+}
+
+.showCard:hover .showCardBtn {
+  background-color: #284B63;
+}
+
+.showCard:hover .moreLessBtn {
+  background-color: #284B63;
 }
 
 .showCard h4 {
@@ -373,7 +394,6 @@ code {
 .tourDeetsShowsDiv {
   clear: both;
   text-align: center;
-  /* padding-top: 50px; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -385,7 +405,6 @@ code {
   text-align: center;
   width: 100%;
   font-weight: 400;
-  /* padding-bottom: 20px; */
   padding: 50px;
 }
 
