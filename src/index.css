@@ -476,10 +476,6 @@ code {
   color: #353535;
 }
 
-.venueCard a:hover {
-  color: #52b4b9;
-}
-
 .venueCard img {
   float: left;
   width: 200px;
@@ -525,8 +521,18 @@ code {
 }
 
 .venueCard:hover {
-  background-color: #D9D9D9;
+  background-color: #52b4b9;
+  border: 2px solid white;
+  color: white;
 } 
+
+.venueCard:hover a {
+  color: white;
+}
+
+.venueCard:hover .moreLessBtn {
+  background-color: #284B63;
+}
 
 /* calls page */
 
