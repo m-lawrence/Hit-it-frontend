@@ -598,7 +598,14 @@ code {
 }
 
 .callCard:hover {
-  background-color: rgb(192, 223, 233);
+  background-color: #52b4b9;
+  border: 2px solid white;
+  color: white;
+}
+
+.callCard:hover .bandLinkButton {
+  background-color: #284B63;
+  border: 2px solid white;
 }
 
 .addIcon {
@@ -1079,9 +1086,6 @@ code {
 
 /* band show page */
 
-.bandShowContainer {
-
-}
 
 .bandProfileMainContainer {
   margin-left: 50px;
