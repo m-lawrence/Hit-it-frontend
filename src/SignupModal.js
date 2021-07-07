@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Signup() {
+function SignupModal() {
     return (
       <div>
         
@@ -8,4 +8,4 @@ function Signup() {
     );
   }
   
-  export default Signup;
+  export default SignupModal;

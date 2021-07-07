@@ -1,11 +1,13 @@
 import React, { useState  } from 'react';
 import { useHistory } from 'react-router-dom';
 import HILogo from './Hit-It-logo.png'
+import SignupModal from './SignupModal';
 
 function Login({ setLoggedInUser, bands, setTours }) {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const history = useHistory()
+    const [signingUp, setSigningUp] = useState(false)
 
     function handleLoginSubmit(e) {
         e.preventDefault()
@@ -19,10 +21,14 @@ function Login({ setLoggedInUser, bands, setTours }) {
         history.push('./profile')
     }
 
+    function handleSignUpClick(e) {
+        e.preventDefault()
+        setSigningUp(signingUp => !signingUp)
+    }
+
     return (
       <div className="loginContainer">
         <div className='box'>
-            {/* <img className="loginLogo" src={HILogo} /> */}
             <h1><img className="loginLogo" src={HILogo} /></h1>
             <form onSubmit={handleLoginSubmit}>
                 <div className='loginRow'>
@@ -35,6 +41,12 @@ function Login({ setLoggedInUser, bands, setTours }) {
                     <button type="submit" id='login'>Login</button>
                 </div>
             </form>
+            <div class="loginRow">
+                <a href="" onClick={handleSignUpClick}>Sign Up</a>
+           </div> 
+           {signingUp
+            &&
+            <SignupModal />}
             {/* <div class="loginRow">
 //              <a href="#">Forget Password</a>
 //          </div>  */}
