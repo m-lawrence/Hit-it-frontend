@@ -46,7 +46,7 @@ function Login({ setLoggedInUser, bands, setTours }) {
            </div> 
            {signingUp
             &&
-            <SignupModal />}
+            <SignupModal setSigningUp={setSigningUp}/>}
             {/* <div class="loginRow">
 //              <a href="#">Forget Password</a>
 //          </div>  */}
