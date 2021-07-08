@@ -1109,7 +1109,7 @@ code {
 
 .signup-form-modal-content{
   width: 500px;
-  height: 400px;
+  height: 600px;
   background-color: #52b4b9;
   color: white;
   text-align: center;
@@ -1127,13 +1127,13 @@ code {
 }
 
 .signup-form-modal-body{
-  padding: 20px;
+  padding: 0;
   border-top: 1px solid #eee;
   height: 250px;
 }
 
 .signup-form-modal-body .input-group{
-  padding: 50px 10px 10px 10px;
+  padding: 30px 10px 10px 10px;
 }
 
 .signup-form-modal-body input {
@@ -1141,25 +1141,60 @@ code {
   border-radius: 20px;
 }
 
-.signupNameLabel {
+.signupEmailLabel {
+  padding-right: 70px;
+}
+
+.signupPasswordLabel {
   padding-right: 40px;
 }
 
-.signupImgLabel {
+.signupNameLabel {
+  padding-right: 30px;
+}
+
+.signupWebsiteLabel {
+  padding-right: 55px;
+}
+
+.signupFacebookLabel {
+  padding-right: 40px;
+}
+
+.signupMusicLinkLabel {
+  padding-right: 40px;
+}
+
+.signupGenreLabel {
+  padding-right: 65px;
+}
+
+.signupLocationLabel {
+  padding-right: 50px;
+}
+
+.signupImageLabel {
+  padding-right: 30px;
+} 
+
+.signupBioLabel {
+  padding-right: 90px;
+} 
+
+.signupBandMembersLabel {
   padding-right: 5px;
 } 
 
-.tour-form-modal-body .bottom-btn{
+.signup-form-modal-body .bottom-btn{
   background-color: #284B63;
   color: white;
   border: none;
   border-radius: 50px;
   width: 200px;
   height: 60px;
-  margin-top: 40px;
 }
 
-.tour-form-modal-content .btn-close{
+.signup-form-modal-content .btn-close{
   margin-top: 10px;
   margin-left: 90%;
 }
