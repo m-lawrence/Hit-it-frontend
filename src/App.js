@@ -62,11 +62,14 @@ function App() {
     setCalls([...calls, callObj])
   }
 
+  function addNewBand(bandObj) {
+    setBands([...bands, bandObj])
+  }
 
   return (
     <div className="bigContainer">
       {loggedInUser && <NavBar setLoggedInUser={setLoggedInUser}/>}
-      {!loggedInUser ? <Login setLoggedInUser={setLoggedInUser} bands={bands} setTours={setTours}/> : null}
+      {!loggedInUser ? <Login setLoggedInUser={setLoggedInUser} bands={bands} setTours={setTours} addNewBand={addNewBand}/> : null}
       <Switch>
         <div className='mainContainer'>
           <Route exact path='/profile'>

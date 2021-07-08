@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import HILogo from './Hit-It-logo.png'
 import SignupModal from './SignupModal';
 
-function Login({ setLoggedInUser, bands, setTours }) {
+function Login({ setLoggedInUser, bands, setTours, addNewBand }) {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const history = useHistory()
@@ -46,7 +46,7 @@ function Login({ setLoggedInUser, bands, setTours }) {
            </div> 
            {signingUp
             &&
-            <SignupModal setSigningUp={setSigningUp}/>}
+            <SignupModal setSigningUp={setSigningUp} addNewBand={addNewBand}/>}
             {/* <div class="loginRow">
 //              <a href="#">Forget Password</a>
 //          </div>  */}
