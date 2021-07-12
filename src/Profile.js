@@ -20,6 +20,7 @@ function Profile({ loggedInUser, addNewTour, tours }) {
                {currentUser.location && <p><span className="profSpan">Location: </span>{currentUser.location}</p>}
                 {currentUser.band_members && <p><span className="profSpan">Band members: </span>{currentUser.band_members}</p>}
                 {currentUser.bio && <p><span className="profSpan">Bio: </span>{currentUser.bio}</p>}
+                <img class="editProf" src="https://img.icons8.com/material-outlined/24/000000/pencil--v2.png"/>
             </div>
         </div>
         <div className='toursHeaderDiv'>

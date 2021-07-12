@@ -213,6 +213,14 @@ code {
   color: #52b4b9;
 }
 
+img.editProf {
+  float: right;
+}
+
+img.editProf:hover {
+  opacity: 70%;
+}
+
 .toursHeaderDiv {
   text-align: center;
   padding-top: 100px;
