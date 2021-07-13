@@ -66,6 +66,10 @@ function App() {
     setBands([...bands, bandObj])
   }
 
+  function editLoggedInUser(editedObj) {
+    setLoggedInUser([editedObj])
+  }
+
   return (
     <div className="bigContainer">
       {loggedInUser && <NavBar setLoggedInUser={setLoggedInUser}/>}
@@ -73,7 +77,7 @@ function App() {
       <Switch>
         <div className='mainContainer'>
           <Route exact path='/profile'>
-          {loggedInUser && <Profile loggedInUser={loggedInUser} addNewTour={addNewTour} tours={tours}/>}
+          {loggedInUser && <Profile loggedInUser={loggedInUser} addNewTour={addNewTour} tours={tours} editLoggedInUser={editLoggedInUser}/>}
           </Route>
           <Route exact path='/tours/:id'>
           {loggedInUser && <TourDetails venues={venues} />}

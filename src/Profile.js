@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ProfileEditModal from './ProfileEditModal';
 import TourList from './TourList';
 
-function Profile({ loggedInUser, addNewTour, tours }) {
+function Profile({ loggedInUser, addNewTour, tours, editLoggedInUser }) {
    const currentUser = loggedInUser[0]
    const [editClicked, setEditClicked] = useState(false)
 
@@ -27,7 +27,7 @@ function Profile({ loggedInUser, addNewTour, tours }) {
                 {currentUser.band_members && <p><span className="profSpan">Band members: </span>{currentUser.band_members}</p>}
                 {currentUser.bio && <p><span className="profSpan">Bio: </span>{currentUser.bio}</p>}
                 <img class="editProf" src="https://img.icons8.com/material-outlined/24/000000/pencil--v2.png" onClick={handleProfEditClick}/>
-                {editClicked && <ProfileEditModal setEditClicked={setEditClicked} />}
+                {editClicked && <ProfileEditModal setEditClicked={setEditClicked} currentUser={currentUser} editLoggedInUser={editLoggedInUser}/>}
             </div>
         </div>
         <div className='toursHeaderDiv'>
