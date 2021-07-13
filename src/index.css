@@ -219,6 +219,9 @@ img.editProf {
 
 img.editProf:hover {
   opacity: 70%;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .toursHeaderDiv {
