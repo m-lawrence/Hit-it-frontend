@@ -45,8 +45,10 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
     },
       body: JSON.stringify(editedUser)
     })
+        .then(r => r.json())
+        .then(editLoggedInUser)
       
-      editLoggedInUser(editedUser)
+    //   editLoggedInUser(editedUser)
       setEditClicked(false)
   }
 
