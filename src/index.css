@@ -1223,3 +1223,124 @@ img.editProf:hover {
   margin-top: 10px;
   margin-left: 90%;
 }
+
+/* Edit profile modal */
+
+.edit-profile-form-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-profile-form-modal-content{
+  width: 600px;
+  height: 730px;
+  background-color: #52b4b9;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+}
+
+
+.edit-profile-form-modal-header {
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.edit-profile-form-modal-title{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;  
+  font-size: 1.4em;
+}
+
+.edit-profile-form-modal-body{
+  padding: 0;
+  border-top: 1px solid #eee;
+  height: 250px;
+}
+
+.edit-profile-form-modal-body .input-group{
+  padding: 30px 10px 10px 10px;
+}
+
+.edit-profile-form-modal-body input {
+  background-color: #D9D9D9;
+  border-radius: 20px;
+  width: 175px;
+}
+
+.editProfileEmailLabel {
+  padding-right: 80px;
+}
+
+.editProfilePasswordLabel {
+  padding-right: 50px;
+}
+
+.editProfileNameLabel {
+  padding-right: 35px;
+}
+
+.editProfileWebsiteLabel {
+  padding-right: 65px;
+}
+
+.editProfileFacebookLabel {
+  padding-right: 50px;
+}
+
+.editProfileMusicLinkLabel {
+  padding-right: 50px;
+}
+
+.editProfileGenreLabel {
+  padding-right: 80px;
+}
+
+.editProfileLocationLabel {
+  padding-right: 60px;
+}
+
+.editProfileImageLabel {
+  padding-right: 40px;
+} 
+
+.editProfileBioLabel {
+  float: left;
+  margin-left: 130px;
+} 
+
+.editProfileBioInput {
+  height: 75px;
+  width: 275px;
+  border-radius: 20px;
+  background-color: #D9D9D9;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 40px;
+  padding: 10px;
+} 
+
+.editProfileBandMembersLabel {
+  padding-right: 5px;
+} 
+
+.edit-profile-form-modal-body .bottom-btn{
+  background-color: #284B63;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 200px;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.edit-profile-form-modal-content .btn-close{
+  margin-top: 10px;
+  margin-left: 90%;
+}

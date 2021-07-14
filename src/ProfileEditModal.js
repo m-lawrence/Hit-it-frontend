@@ -56,38 +56,38 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
   }
 
     return (
-      <div className="signup-form-modal">
-      <div className="signup-form-modal-content">
+      <div className="edit-profile-form-modal">
+      <div className="edit-profile-form-modal-content">
           <button onClick={handleCloseModal} type="button" className="btn-close" aria-label="Close"></button>
-          <div className="signup-form-modal-header">
-              <h4 className="signup-form-modal-title">Edit Profile</h4>
+          <div className="edit-profile-form-modal-header">
+              <h4 className="edit-profile-form-modal-title">Edit Profile</h4>
           </div>
           
-          <div className="signup-form-modal-body">
+          <div className="edit-profile-form-modal-body">
               <div className="input-group">
                   <form onSubmit={handleProfileEditSubmit}>
-                   <label className="signupEmailLabel">Email: </label>
-                   <input className="signupNameInput" type="text" name="email" value={profileEditData.email} onChange={handleEditProfileFormChange}></input><br></br><br></br>
-                   <label className="signupPasswordLabel">Password: </label>
-                   <input className="signupPasswordInput" type="password" name="password" value={profileEditData.password} onChange={handleEditProfileFormChange}></input><br></br><br></br>
-                   <label className="signupNameLabel">Band name: </label>
-                   <input className="signupNameInput" type="text" name="name" value={profileEditData.name ? profileEditData.name : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
-                   <label className="signupWebsiteLabel">Website: </label>
-                   <input className="signupWebsiteInput" type="text" name="website" value={profileEditData.website ? profileEditData.website : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
-                   <label className="signupFacebookLabel">Facebook: </label>
-                   <input className="signupFacebookInput" type="text" name="facebook" value={profileEditData.facebook ? profileEditData.facebook : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
-                   <label className="signupMusicLinkLabel">Music link: </label>
-                   <input className="signupMusicLinkInput" type="text" name="music_link" value={profileEditData.music_link ? profileEditData.music_link : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
-                   <label className="signupGenreLabel">Genre: </label>
-                   <input className="signupGenreInput" type="text" name="genre" value={profileEditData.genre ? profileEditData.genre : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
-                   <label className="signupLocationLabel">Location: </label>
-                   <input className="signupLocationInput" type="text" name="location" value={profileEditData.location ? profileEditData.location : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
-                   <label className="signupImageLabel">Image URL: </label>
-                   <input className="signupImageInput" type="text" name="image" value={profileEditData.image ? profileEditData.image : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
-                   <label className="signupBandMembersLabel">Band members: </label>
-                   <input className="signupBandMembersInput" type="textarea" name="band_members" value={profileEditData.band_members ? profileEditData.band_members : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
-                   <label className="signupBioLabel">Bio: </label><br></br>
-                   <textarea className="signupBioInput" type="textarea" name="bio" value={profileEditData.bio ? profileEditData.bio : ""} onChange={handleEditProfileFormChange} /><br></br><br></br>
+                   <label className="editProfileEmailLabel">Email: </label>
+                   <input className="editProfileNameInput" type="text" name="email" value={profileEditData.email} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   <label className="editProfilePasswordLabel">Password: </label>
+                   <input className="editProfilePasswordInput" type="password" name="password" value={profileEditData.password} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   <label className="editProfileNameLabel">Band name: </label>
+                   <input className="editProfileNameInput" type="text" name="name" value={profileEditData.name ? profileEditData.name : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   <label className="editProfileWebsiteLabel">Website: </label>
+                   <input className="editProfileWebsiteInput" type="text" name="website" value={profileEditData.website ? profileEditData.website : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   <label className="editProfileFacebookLabel">Facebook: </label>
+                   <input className="editProfileFacebookInput" type="text" name="facebook" value={profileEditData.facebook ? profileEditData.facebook : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   <label className="editProfileMusicLinkLabel">Music link: </label>
+                   <input className="editProfileMusicLinkInput" type="text" name="music_link" value={profileEditData.music_link ? profileEditData.music_link : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   <label className="editProfileGenreLabel">Genre: </label>
+                   <input className="editProfileGenreInput" type="text" name="genre" value={profileEditData.genre ? profileEditData.genre : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   <label className="editProfileLocationLabel">Location: </label>
+                   <input className="editProfileLocationInput" type="text" name="location" value={profileEditData.location ? profileEditData.location : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   <label className="editProfileImageLabel">Image URL: </label>
+                   <input className="editProfileImageInput" type="text" name="image" value={profileEditData.image ? profileEditData.image : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   <label className="editProfileBandMembersLabel">Band members: </label>
+                   <input className="editProfileBandMembersInput" type="textarea" name="band_members" value={profileEditData.band_members ? profileEditData.band_members : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   <label className="editProfileBioLabel">Bio: </label><br></br>
+                   <textarea className="editProfileBioInput" type="textarea" name="bio" value={profileEditData.bio ? profileEditData.bio : ""} onChange={handleEditProfileFormChange} /><br></br><br></br>
                    <button type="submit" className="bottom-btn">Submit changes</button>
                </form>
               </div>
