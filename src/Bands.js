@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import BandGenreFilter from './BandGenreFilter';
 import SingleBand from './SingleBand';
 
 function Bands({ bands }) {
@@ -20,23 +21,25 @@ function Bands({ bands }) {
 
     return (
         <div className="bandsMainContainer">
-        <div className="bandsSearchContainer">
-            <form className="searchbar" onSubmit={handleBandSearchSubmit}>
-                <input
-                    className="bandSearchInput"
-                    type="text"
-                    id="search"
-                    placeholder="Location"
-                    value={bandSearch}
-                    onChange={(e) => setBandSearch(e.target.value)}
-                />
-                <button className="bandSearchBtn" type="submit">Search</button>
-            </form>
-            {/* <VenueCatFilter setSelectedVenueCategory={setSelectedVenueCategory} /> */}
-        </div>
-        <div className="bandListDiv">
-            {bandsByLocation}
-        </div>
+            <div className="bandsSearchContainer">
+                <form className="searchbar" onSubmit={handleBandSearchSubmit}>
+                    <input
+                        className="bandSearchInput"
+                        type="text"
+                        id="search"
+                        placeholder="Location"
+                        value={bandSearch}
+                        onChange={(e) => setBandSearch(e.target.value)}
+                    />
+                    <button className="bandSearchBtn" type="submit">Search</button>
+                </form>
+            </div>
+            <div>
+                <BandGenreFilter />
+            </div>
+            <div className="bandListDiv">
+                {bandsByLocation}
+            </div>
       </div>
     );
   }
