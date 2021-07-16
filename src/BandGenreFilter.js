@@ -7,7 +7,7 @@ function BandGenreFilter() {
     }
 
     return (
-      <div className="venueFilterDiv">
+      <div className="bandGenreFilterDiv">
         <label>Genre: </label><br></br><br></br>
             <select className="select" onChange={handleBandGenreChange}>
                 <option value="All">All</option>

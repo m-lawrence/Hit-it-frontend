@@ -1095,6 +1095,17 @@ img.editProf:hover {
   opacity: 75%;
 }
 
+.bandGenreFilterDiv {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.bandGenreFilterDiv .select {
+  border-radius: 20px;
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
 /* band show page */
 
 
