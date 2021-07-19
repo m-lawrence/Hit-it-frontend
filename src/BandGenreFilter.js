@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function BandGenreFilter() {
+function BandGenreFilter({ bandsByLocation }) {
+    const [genreSelect, setGenreSelect] = useState("All")
 
     function handleBandGenreChange(e) {
-        console.log(e.target.value)
+        setGenreSelect(e.target.value)
     }
+
+    const bandsByGenre = bandsByLocation.filter(band => {
+        return band.props.band.genre.toLowerCase().includes(genreSelect.toLocaleLowerCase())
+    })
 
     return (
       <div className="bandGenreFilterDiv">

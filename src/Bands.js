@@ -35,7 +35,7 @@ function Bands({ bands }) {
                 </form>
             </div>
             <div>
-                <BandGenreFilter />
+                <BandGenreFilter bandsByLocation={bandsByLocation}/>
             </div>
             <div className="bandListDiv">
                 {bandsByLocation}
