@@ -8,7 +8,11 @@ function BandGenreFilter({ bandsByLocation }) {
     }
 
     const bandsByGenre = bandsByLocation.filter(band => {
+        if(genreSelect === "All") {
+            return band
+        } else {
         return band.props.band.genre.toLowerCase().includes(genreSelect.toLocaleLowerCase())
+        }
     })
 
     return (
