@@ -86,7 +86,7 @@ function App() {
           {loggedInUser && <Venues setSearchText={setSearchText} searchText={searchText} venues={filteredByCatVenues} setSearch={setSearch} search={search} setSelectedVenueCategory={setSelectedVenueCategory} setMapCoordinates={setMapCoordinates} mapCoordinates={mapCoordinates} />}
           </Route>
           <Route exact path='/bands'>
-          {loggedInUser && <Bands bands={bands}/>}
+          {loggedInUser && <Bands bands={bands} />}
           </Route>
           <Route path='/bands/:id'>
           {loggedInUser && <BandDetails />}

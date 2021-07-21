@@ -7,13 +7,19 @@ function BandGenreFilter({ bandsByLocation }) {
         setGenreSelect(e.target.value)
     }
 
-    const bandsByGenre = bandsByLocation.filter(band => {
+    const bandsByGenreFilter = bandsByLocation.filter(band => {
         if(genreSelect === "All") {
             return band
         } else {
         return band.props.band.genre.toLowerCase().includes(genreSelect.toLocaleLowerCase())
         }
     })
+    
+    const bandsByGenreArr = bandsByGenreFilter.map(group => {
+        return group.props.band
+    })
+
+    // Move state and variables to App.js
 
     return (
       <div className="bandGenreFilterDiv">
