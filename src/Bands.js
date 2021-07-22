@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import BandGenreFilter from './BandGenreFilter';
 import SingleBand from './SingleBand';
 
-function Bands({ bands }) {
+function Bands({ bands, setGenreSelect, genreSelect }) {
     const [bandSearch, setBandSearch] = useState("")
     const [bandSearchText, setBandSearchText] = useState("asheville")
     
@@ -14,10 +14,19 @@ function Bands({ bands }) {
         return band.props.band.location.toLowerCase().includes(bandSearchText.toLocaleLowerCase())
     })
 
+    const bandsByGenreFilter = bandsByLocation.filter(band => {
+        if(genreSelect === "All") {
+            return band
+        } else {
+        return band.props.band.genre.toLowerCase().includes(genreSelect.toLocaleLowerCase())
+        }
+    })
+
     function handleBandSearchSubmit(e) {
         e.preventDefault()
         setBandSearchText(bandSearch)
     }
+
 
     return (
         <div className="bandsMainContainer">
@@ -35,10 +44,10 @@ function Bands({ bands }) {
                 </form>
             </div>
             <div>
-                <BandGenreFilter bandsByLocation={bandsByLocation} />
+                <BandGenreFilter setGenreSelect={setGenreSelect}/>
             </div>
             <div className="bandListDiv">
-                {bandsByLocation}
+                {bandsByGenreFilter}
             </div>
       </div>
     );

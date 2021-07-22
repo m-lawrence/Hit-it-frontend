@@ -20,7 +20,7 @@ function App() {
   const [selectedVenueCategory, setSelectedVenueCategory] = useState("All")
   const [calls, setCalls] = useState([])
   const [mapCoordinates, setMapCoordinates] = useState([35.58884248434797, -82.56472777557953])
-
+  const [genreSelect, setGenreSelect] = useState("All")
 
   useEffect(() => {
     fetch('http://localhost:3000/band_users')
@@ -70,6 +70,7 @@ function App() {
     setLoggedInUser([editedObj])
   }
 
+
   return (
     <div className="bigContainer">
       {loggedInUser && <NavBar setLoggedInUser={setLoggedInUser}/>}
@@ -86,7 +87,7 @@ function App() {
           {loggedInUser && <Venues setSearchText={setSearchText} searchText={searchText} venues={filteredByCatVenues} setSearch={setSearch} search={search} setSelectedVenueCategory={setSelectedVenueCategory} setMapCoordinates={setMapCoordinates} mapCoordinates={mapCoordinates} />}
           </Route>
           <Route exact path='/bands'>
-          {loggedInUser && <Bands bands={bands} />}
+          {loggedInUser && <Bands bands={bands} setGenreSelect={setGenreSelect} genreSelect={genreSelect} />}
           </Route>
           <Route path='/bands/:id'>
           {loggedInUser && <BandDetails />}

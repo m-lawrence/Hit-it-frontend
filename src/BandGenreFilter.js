@@ -1,25 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function BandGenreFilter({ bandsByLocation }) {
-    const [genreSelect, setGenreSelect] = useState("All")
+function BandGenreFilter({ setGenreSelect }) {
 
     function handleBandGenreChange(e) {
         setGenreSelect(e.target.value)
     }
-
-    const bandsByGenreFilter = bandsByLocation.filter(band => {
-        if(genreSelect === "All") {
-            return band
-        } else {
-        return band.props.band.genre.toLowerCase().includes(genreSelect.toLocaleLowerCase())
-        }
-    })
-    
-    const bandsByGenreArr = bandsByGenreFilter.map(group => {
-        return group.props.band
-    })
-
-    // Move state and variables to App.js
 
     return (
       <div className="bandGenreFilterDiv">
