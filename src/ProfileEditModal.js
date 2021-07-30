@@ -10,7 +10,7 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
     music_link: currentUser.music_link,
     genre: currentUser.genre,
     location: currentUser.location,
-    image: currentUser.image,
+    image: currentUser.band_image,
     bio: currentUser.bio,
     band_members: currentUser.band_members
   })
@@ -31,7 +31,7 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
       music_link: profileEditData.music_link,
       genre: profileEditData.genre,
       location: profileEditData.location,
-      image: profileEditData.image,
+      image: profileEditData.band_image,
       bio: profileEditData.bio,
       band_members: profileEditData.bandMembers,
       spotify: "",
@@ -54,6 +54,8 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
   function handleEditProfileFormChange(e) {
     setProfileEditData({...profileEditData, [e.target.name]: e.target.value})
   }
+
+  // Make separate function to handle image upload change
 
     return (
       <div className="edit-profile-form-modal">
@@ -82,8 +84,10 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
                    <input className="editProfileGenreInput" type="text" name="genre" value={profileEditData.genre ? profileEditData.genre : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
                    <label className="editProfileLocationLabel">Location: </label>
                    <input className="editProfileLocationInput" type="text" name="location" value={profileEditData.location ? profileEditData.location : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
-                   <label className="editProfileImageLabel">Image URL: </label>
-                   <input className="editProfileImageInput" type="text" name="image" value={profileEditData.image ? profileEditData.image : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   <label className="editProfileImageLabel">Upload image: </label>
+                   <input className="editProfileImageInput" type="file" name="image" value={profileEditData.image ? profileEditData.image : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   {/* <label className="editProfileImageLabel">Image URL: </label>
+                   <input className="editProfileImageInput" type="text" name="image" value={profileEditData.image ? profileEditData.image : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br> */}
                    <label className="editProfileBandMembersLabel">Band members: </label>
                    <input className="editProfileBandMembersInput" type="textarea" name="band_members" value={profileEditData.band_members ? profileEditData.band_members : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
                    <label className="editProfileBioLabel">Bio: </label><br></br>

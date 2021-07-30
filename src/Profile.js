@@ -15,7 +15,7 @@ function Profile({ loggedInUser, addNewTour, tours, editLoggedInUser }) {
         <h1 className='bandProfileHeader'>{currentUser.name}</h1>
         <div className="bandInfoDiv">
             <div className='bandProfileImgDiv'>
-                <img className='bandProfileImg' src={currentUser.image} alt={currentUser.name} />
+                <img className='bandProfileImg' src={currentUser.band_image} alt={currentUser.name} />
             </div>
             <div className='bandInfo'>
                 <p><span className="profSpan">Email: </span>{currentUser.email}</p>

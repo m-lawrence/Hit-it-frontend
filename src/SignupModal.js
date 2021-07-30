@@ -82,7 +82,7 @@ function SignupModal({ setSigningUp, addNewBand }) {
                    <input className="signupLocationInput" type="text" name="location" value={signUpData.location} onChange={handleSignUpFormChange}></input><br></br><br></br>
                    {/* <label className="signupImageLabel">Image URL: </label>
                    <input className="signupImageInput" type="text" name="image" value={signUpData.image} onChange={handleSignUpFormChange}></input><br></br><br></br> */}
-                   <label className="signupImageLabel">Upload Image: </label>
+                   <label className="signupImageLabel">Upload image: </label>
                    <input className="signupImageInput" type="file" name="image" value={signUpData.image} onChange={handleSignUpFormChange}></input><br></br><br></br>
                    <label className="signupBandMembersLabel">Band members: </label>
                    <input className="signupBandMembersInput" type="textarea" name="band_members" value={signUpData.band_members} onChange={handleSignUpFormChange}></input><br></br><br></br>
