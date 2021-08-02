@@ -10,9 +10,10 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
     music_link: currentUser.music_link,
     genre: currentUser.genre,
     location: currentUser.location,
-    image: currentUser.band_image,
+    image: currentUser.image,
     bio: currentUser.bio,
-    band_members: currentUser.band_members
+    band_members: currentUser.band_members,
+    band_image: currentUser.band_image
   })
 
   function handleCloseModal() {
@@ -31,11 +32,12 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
       music_link: profileEditData.music_link,
       genre: profileEditData.genre,
       location: profileEditData.location,
-      image: profileEditData.band_image,
+      image: currentUser.image,
       bio: profileEditData.bio,
       band_members: profileEditData.bandMembers,
       spotify: "",
-      id: currentUser.id
+      id: currentUser.id,
+      band_image: profileEditData.band_image
     }
 
     fetch(`http://localhost:3000/band_users/${currentUser.id}`, {
@@ -55,7 +57,12 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
     setProfileEditData({...profileEditData, [e.target.name]: e.target.value})
   }
 
-  // Make separate function to handle image upload change
+  function handleEditProfileImgChange(e) {
+    setProfileEditData({...profileEditData, band_image: URL.createObjectURL(e.target.files[0])})
+    console.log(e.target.files[0])
+  }
+
+  // Figure out why band_image is null
 
     return (
       <div className="edit-profile-form-modal">
@@ -85,7 +92,7 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
                    <label className="editProfileLocationLabel">Location: </label>
                    <input className="editProfileLocationInput" type="text" name="location" value={profileEditData.location ? profileEditData.location : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
                    <label className="editProfileImageLabel">Upload image: </label>
-                   <input className="editProfileImageInput" type="file" name="image" value={profileEditData.image ? profileEditData.image : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
+                   <input className="editProfileImageInput" type="file" name="image" onChange={handleEditProfileImgChange}></input><br></br><br></br>
                    {/* <label className="editProfileImageLabel">Image URL: </label>
                    <input className="editProfileImageInput" type="text" name="image" value={profileEditData.image ? profileEditData.image : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br> */}
                    <label className="editProfileBandMembersLabel">Band members: </label>
