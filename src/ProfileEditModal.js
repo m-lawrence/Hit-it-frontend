@@ -62,7 +62,7 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
     console.log(e.target.files[0])
   }
 
-  // Figure out why band_image is null
+  // Try putting band_image in separate state and try using axios instead of fetch
 
     return (
       <div className="edit-profile-form-modal">
