@@ -63,7 +63,6 @@ function Venues({ venues, search, setSearch, setSearchText, searchText,setSelect
     
     return (
       <div className="venueMainContainer">
-        {/* <h1>Find a Venue</h1> */}
         <VenueMap key={mapCoordinates[0] + mapCoordinates[1]} venuesToMap={removedTbd} searchText={searchText} mapCoordinates={mapCoordinates} viewport={viewport} setViewport={setViewport}/>
         <div className="venuesSearchContainer">
             <form className="searchbar" onSubmit={handleSearchSubmit}>

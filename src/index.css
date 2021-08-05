@@ -1331,7 +1331,6 @@ img.editProf:hover {
 .edit-profile-form-modal-body input[type=file]::file-selector-button {
   border-radius: 20px;
   padding: 0 10px;
-  font-weight: bolder;
 } 
 
 .editProfileBioLabel {
