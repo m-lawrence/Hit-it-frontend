@@ -1,6 +1,7 @@
 import { React, useState } from 'react';
 
 function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
+  const [bandImage, setBandImage] = useState(currentUser.band_image)
   const [profileEditData, setProfileEditData] = useState({
     email: currentUser.email,
     password: currentUser.password,
@@ -12,8 +13,7 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
     location: currentUser.location,
     image: currentUser.image,
     bio: currentUser.bio,
-    band_members: currentUser.band_members,
-    band_image: currentUser.band_image
+    band_members: currentUser.band_members
   })
 
   function handleCloseModal() {
@@ -37,7 +37,7 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
       band_members: profileEditData.bandMembers,
       spotify: "",
       id: currentUser.id,
-      band_image: profileEditData.band_image
+      band_image: bandImage
     }
 
     fetch(`http://localhost:3000/band_users/${currentUser.id}`, {
@@ -58,11 +58,11 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
   }
 
   function handleEditProfileImgChange(e) {
-    setProfileEditData({...profileEditData, band_image: URL.createObjectURL(e.target.files[0])})
+    setBandImage(URL.createObjectURL(e.target.files[0]))
     console.log(e.target.files[0])
   }
 
-  // Try putting band_image in separate state and try using axios instead of fetch
+  
 
     return (
       <div className="edit-profile-form-modal">
