@@ -1,4 +1,5 @@
 import { React, useState } from 'react';
+import axios from 'axios';
 
 function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
   const [bandImage, setBandImage] = useState(currentUser.band_image)
@@ -22,6 +23,18 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
 
   function handleProfileEditSubmit(e) {
     e.preventDefault()
+
+    // const data = new FormData()
+    // data.append('file', bandImage)
+
+    // axios.patch(`http://localhost:3000/band_users/${currentUser.id}`, data, {
+    //   method: 'PATCH',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    // },
+    //   data: data
+    // })
+    // .then(console.log)
 
     const editedUser = {
       email: profileEditData.email,
@@ -58,7 +71,8 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
   }
 
   function handleEditProfileImgChange(e) {
-    setBandImage(URL.createObjectURL(e.target.files[0]))
+    // setBandImage(URL.createObjectURL(e.target.files[0]))
+    setBandImage(e.target.files[0])
     console.log(e.target.files[0])
   }
 
