@@ -52,6 +52,7 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
       id: currentUser.id,
       band_image: bandImage
     }
+    console.log(editedUser.bandImage)
 
     fetch(`http://localhost:3000/band_users/${currentUser.id}`, {
       method: 'PATCH',
@@ -71,12 +72,13 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
   }
 
   function handleEditProfileImgChange(e) {
-    // setBandImage(URL.createObjectURL(e.target.files[0]))
-    setBandImage(e.target.files[0])
-    console.log(e.target.files[0])
+    setBandImage(URL.createObjectURL(e.target.files[0]))
+    // setBandImage(e.target.files[0])
+    console.log(URL.createObjectURL(e.target.files[0]))
   }
-
   
+
+  // Need a separate fetch for the blob
 
     return (
       <div className="edit-profile-form-modal">
