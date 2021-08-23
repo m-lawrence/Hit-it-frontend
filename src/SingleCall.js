@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import moment from 'moment'
+import moment from 'moment';
 import { useHistory } from 'react-router-dom';
 
 function SingleCall({ call, loggedInUser, bands }) {

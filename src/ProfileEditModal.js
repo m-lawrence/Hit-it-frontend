@@ -24,8 +24,8 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
   function handleProfileEditSubmit(e) {
     e.preventDefault()
 
-    // const data = new FormData()
-    // data.append('file', bandImage)
+    const data = new FormData();
+    data.append('file', bandImage)
 
     // axios.patch(`http://localhost:3000/band_users/${currentUser.id}`, data, {
     //   method: 'PATCH',
@@ -63,11 +63,10 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
         .then(editLoggedInUser)
 
     fetch(`http://localhost:3000/band_users/${currentUser.id}`, {
-      method: 'PATCH',
-      body: {band_image: bandImage}
+      method: 'POST',
+      body: data
     })
-        .then(r => r.json())
-        .then(console.log)
+        .catch(error=>console.log(error))
       
       setEditClicked(false)
   }
@@ -79,7 +78,7 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
   function handleEditProfileImgChange(e) {
     // setBandImage(URL.createObjectURL(e.target.files[0]))
     setBandImage(e.target.files[0])
-    console.log(URL.createObjectURL(e.target.files[0]))
+    console.log(e.target.files[0])
   }
   
 
@@ -111,7 +110,7 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
                    <label className="editProfileLocationLabel">Location: </label>
                    <input className="editProfileLocationInput" type="text" name="location" value={profileEditData.location ? profileEditData.location : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br>
                    <label className="editProfileImageLabel">Upload image: </label>
-                   <input className="editProfileImageInput" type="file" name="image" onChange={handleEditProfileImgChange}></input><br></br><br></br>
+                   <input className="editProfileImageInput" type="file" accept="image/*" multiple={false} name="image" onChange={handleEditProfileImgChange}></input><br></br><br></br>
                    {/* <label className="editProfileImageLabel">Image URL: </label>
                    <input className="editProfileImageInput" type="text" name="image" value={profileEditData.image ? profileEditData.image : ""} onChange={handleEditProfileFormChange}></input><br></br><br></br> */}
                    <label className="editProfileBandMembersLabel">Band members: </label>
