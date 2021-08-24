@@ -25,7 +25,7 @@ function ProfileEditModal({ setEditClicked, currentUser, editLoggedInUser }) {
     e.preventDefault()
 
     const data = new FormData();
-    data.append('file', bandImage)
+    data.append('band_image', bandImage)
 
     // axios.patch(`http://localhost:3000/band_users/${currentUser.id}`, data, {
     //   method: 'PATCH',
